@@ -1,0 +1,143 @@
+{
+  "description": "Invalid test data for signup page negative testing",
+
+  "empty_fields": {
+    "all_empty": {
+      "full_name": "",
+      "email": "",
+      "password": "",
+      "confirm_password": ""
+    },
+    "name_empty": {
+      "full_name": "",
+      "email": "john@test.com",
+      "password": "SecurePass@123",
+      "confirm_password": "SecurePass@123"
+    },
+    "email_empty": {
+      "full_name": "John Smith",
+      "email": "",
+      "password": "SecurePass@123",
+      "confirm_password": "SecurePass@123"
+    },
+    "password_empty": {
+      "full_name": "John Smith",
+      "email": "john@test.com",
+      "password": "",
+      "confirm_password": "SecurePass@123"
+    },
+    "confirm_password_empty": {
+      "full_name": "John Smith",
+      "email": "john@test.com",
+      "password": "SecurePass@123",
+      "confirm_password": ""
+    }
+  },
+
+  "password_mismatch": {
+    "full_name": "John Smith",
+    "email": "john@test.com",
+    "password": "SecurePass@123",
+    "confirm_password": "DifferentPass@456"
+  },
+
+  "password_too_short": {
+    "full_name": "John Smith",
+    "email": "john@test.com",
+    "password": "Pass@1",
+    "confirm_password": "Pass@1",
+    "description": "Less than 8 characters"
+  },
+
+  "password_exactly_7_chars": {
+    "full_name": "John Smith",
+    "email": "john@test.com",
+    "password": "Pass@12",
+    "confirm_password": "Pass@12",
+    "description": "Boundary test - exactly 7 characters"
+  },
+
+  "invalid_email_formats": [
+    {
+      "email": "plaintext",
+      "description": "No @ symbol"
+    },
+    {
+      "email": "user@",
+      "description": "Missing domain"
+    },
+    {
+      "email": "@domain.com",
+      "description": "Missing username"
+    },
+    {
+      "email": "user@.com",
+      "description": "Invalid domain"
+    },
+    {
+      "email": "user@domain",
+      "description": "Missing TLD"
+    },
+    {
+      "email": "user name@domain.com",
+      "description": "Space in email"
+    },
+    {
+      "email": "user@@domain.com",
+      "description": "Double @"
+    }
+  ],
+
+  "duplicate_email": {
+    "full_name": "John Smith",
+    "email": "existing.user@test.com",
+    "password": "SecurePass@123",
+    "confirm_password": "SecurePass@123",
+    "description": "Email already registered (assumes this email exists)"
+  },
+
+  "name_only_spaces": {
+    "full_name": "     ",
+    "email": "john@test.com",
+    "password": "SecurePass@123",
+    "confirm_password": "SecurePass@123"
+  },
+
+  "name_only_numbers": {
+    "full_name": "12345",
+    "email": "john@test.com",
+    "password": "SecurePass@123",
+    "confirm_password": "SecurePass@123"
+  },
+
+  "name_special_characters": {
+    "full_name": "!@#$%^&*()",
+    "email": "john@test.com",
+    "password": "SecurePass@123",
+    "confirm_password": "SecurePass@123"
+  },
+
+  "password_only_spaces": {
+    "full_name": "John Smith",
+    "email": "john@test.com",
+    "password": "        ",
+    "confirm_password": "        ",
+    "description": "8 spaces"
+  },
+
+  "weak_password_no_special_chars": {
+    "full_name": "John Smith",
+    "email": "john@test.com",
+    "password": "abcdefgh",
+    "confirm_password": "abcdefgh",
+    "description": "Only lowercase letters, no special chars/numbers"
+  },
+
+  "password_case_sensitivity": {
+    "full_name": "John Smith",
+    "email": "john@test.com",
+    "password": "SecurePass@123",
+    "confirm_password": "securepass@123",
+    "description": "Different case in confirm password"
+  }
+}

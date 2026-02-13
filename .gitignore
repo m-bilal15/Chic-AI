@@ -1,0 +1,172 @@
+# CHIC-AI - Git Ignore File
+# Generated: February 12, 2026
+
+# ====================
+# Exclude Backend and Frontend Folders
+# ====================
+chic-backend/
+chich/
+
+# ====================
+# Python
+# ====================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ====================
+# Virtual Environment
+# ====================
+venv/
+env/
+ENV/
+virtualenv/
+.venv
+
+# ====================
+# Test Results & Evidence
+# ====================
+# Keep structure, ignore content
+AutomationTests/python_tests/results/Passed/*/
+AutomationTests/python_tests/results/Failed/*/
+AutomationTests/python_tests/results/failures/
+AutomationTests/python_tests/results/*.html
+AutomationTests/python_tests/results/*.xml
+AutomationTests/python_tests/results/*.log
+
+# Screenshots & Videos (evidence files)
+*.png
+*.jpg
+*.jpeg
+*.webm
+*.mp4
+*.gif
+
+# But keep example screenshots in docs
+!docs/**/*.png
+!docs/**/*.jpg
+
+# ====================
+# Playwright
+# ====================
+test-results/
+playwright-report/
+playwright/.auth/
+
+# ====================
+# Pytest
+# ====================
+.pytest_cache/
+.coverage
+htmlcov/
+*.cover
+.hypothesis/
+
+# ====================
+# Allure Reports
+# ====================
+allure-results/
+allure-report/
+
+# ====================
+# Logs
+# ====================
+*.log
+logs/
+AutomationTests/python_tests/results/logs/
+
+# ====================
+# IDE & Editors
+# ====================
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+
+# Sublime
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# ====================
+# OS Generated
+# ====================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ====================
+# Sensitive Data
+# ====================
+.env
+.env.local
+.env.*.local
+auth.json
+credentials.json
+config/local.ini
+**/secrets.json
+**/passwords.txt
+
+# ====================
+# Temporary Files
+# ====================
+tmp/
+temp/
+*.tmp
+*.bak
+*.cache
+
+# ====================
+# Node (if frontend tests added later)
+# ====================
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# ====================
+# Keep These Files
+# ====================
+# Keep structure documentation
+!AutomationTests/python_tests/results/SUMMARY.md
+!AutomationTests/python_tests/results/SUMMARY.json
+!AutomationTests/python_tests/results/FOLDER_STRUCTURE_VERIFIED.md
+!AutomationTests/python_tests/results/Failed/README.md
+
+# Keep example test data
+!AutomationTests/python_tests/test_data/examples/
+
+# Keep documentation
+!*.md
+!docs/

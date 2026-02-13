@@ -1,0 +1,542 @@
+[
+  {
+    "Test Case ID": "TC_SIGNUP_001",
+    "Test Description": "Verify Sign Up page loads successfully",
+    "Steps to Execute": "1. Open browser\n2. Navigate to https://app.digitalstylist.com/login\n3. Click \"Sign up here\" link (or navigate directly to Sign Up)\n4. Wait for page to fully load",
+    "Expected Results": "1. Sign Up page loads successfully\n2. CHIC logo is visible at the top\n3. \"Create your account\" heading is displayed\n4. Subtitle \"Join CHIC and discover your perfect style\" is visible\n5. Form with Full Name, Email Address, Password, Confirm Password fields is visible\n6. \"Create Account\" button is visible\n7. \"Sign up with Google\" button is visible\n8. \"Already have an account? Sign in here\" link is visible",
+    "Test Data": "URL: https://app.digitalstylist.com/login",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_002",
+    "Test Description": "Verify successful account creation with all valid data",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Enter valid full name in \"Full Name\" field\n3. Enter valid email in \"Email Address\" field\n4. Enter valid password (min 8 chars) in \"Password\" field\n5. Enter same password in \"Confirm Password\" field\n6. Click \"Create Account\" button",
+    "Expected Results": "1. Loading indicator appears on Create Account button\n2. Account is created successfully\n3. User receives a confirmation email OR is redirected to onboarding/dashboard\n4. Success message may be displayed",
+    "Test Data": "Full Name: Bilal Ahmed\nEmail: bilal.new@test.com\nPassword: SecurePass@123\nConfirm Password: SecurePass@123",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_003",
+    "Test Description": "Verify Full Name field accepts valid names",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Click on \"Full Name\" field\n3. Enter a valid full name\n4. Click outside the field (blur)",
+    "Expected Results": "1. Name is accepted without validation error\n2. Field retains the entered value\n3. No error message appears",
+    "Test Data": "Full Name: Bilal Ahmed",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_004",
+    "Test Description": "Verify Full Name field accepts names with special characters",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Enter names containing hyphens, apostrophes, and accented characters\n3. Click outside the field",
+    "Expected Results": "1. Names with valid special characters are accepted\n2. No validation error for culturally valid names",
+    "Test Data": "Test with each:\n- \"O'Brien Smith\"\n- \"Jean-Pierre Dupont\"\n- \"María García\"\n- \"Müller Fischer\"",
+    "Priority": "Medium",
+    "Test Type": "Positive"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_005",
+    "Test Description": "Verify Email field accepts valid email formats",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Enter valid email address in Email field\n3. Click outside the field",
+    "Expected Results": "1. Email is accepted without validation error\n2. No red border or error message",
+    "Test Data": "Email: user@example.com",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_006",
+    "Test Description": "Verify Password field masks input characters",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Click on \"Password\" field\n3. Type a password",
+    "Expected Results": "1. Characters are masked (shown as dots/bullets)\n2. Actual text is NOT visible\n3. Eye/visibility toggle icon (👁) is visible on the right side",
+    "Test Data": "Password: TestPass@123",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_007",
+    "Test Description": "Verify Password visibility toggle on Password field",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Enter password in \"Password\" field\n3. Click the eye icon (👁) on the right side\n4. Click the eye icon again",
+    "Expected Results": "1. Initially: password is masked (dots)\n2. After first click: password text becomes visible in plain text\n3. Eye icon changes state (open/closed)\n4. After second click: password is masked again",
+    "Test Data": "Password: MySecret@123",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_008",
+    "Test Description": "Verify Password visibility toggle on Confirm Password field",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Enter password in \"Confirm Password\" field\n3. Click the eye icon (👁) on the right side\n4. Click the eye icon again",
+    "Expected Results": "1. Initially: password is masked (dots)\n2. After first click: text becomes visible\n3. Eye icon toggles state\n4. After second click: password is masked again",
+    "Test Data": "Confirm Password: MySecret@123",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_009",
+    "Test Description": "Verify Sign Up with Google button functionality",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Click \"Sign up with Google\" button",
+    "Expected Results": "1. Google OAuth popup/redirect appears\n2. Google account selection page is displayed\n3. User can select a Google account\n4. After successful Google auth, account is created and user is redirected to onboarding/dashboard\n5. Full Name and Email are pre-populated from Google profile",
+    "Test Data": "Valid Google account credentials",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_010",
+    "Test Description": "Verify \"Sign in here\" link navigates to Login page",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Locate \"Already have an account? Sign in here\" text\n3. Click \"Sign in here\" link",
+    "Expected Results": "1. User is redirected to the Login/Sign In page\n2. Login form with Email and Password is displayed\n3. \"Welcome back\" heading appears",
+    "Test Data": "N/A",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_011",
+    "Test Description": "Verify sign up using keyboard (Tab + Enter)",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Enter Full Name, press Tab\n3. Enter Email, press Tab\n4. Enter Password, press Tab\n5. Enter Confirm Password\n6. Press Enter key",
+    "Expected Results": "1. Tab key moves focus: Full Name → Email → Password → Confirm Password\n2. Pressing Enter triggers the \"Create Account\" action\n3. Account is created if all data is valid",
+    "Test Data": "Full Name: Bilal Ahmed\nEmail: bilal.kb@test.com\nPassword: SecurePass@123\nConfirm Password: SecurePass@123",
+    "Priority": "Medium",
+    "Test Type": "Positive"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_012",
+    "Test Description": "Verify password with exactly 8 characters (minimum boundary)",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Fill Full Name and Email\n3. Enter a password with exactly 8 characters\n4. Confirm the password\n5. Click \"Create Account\"",
+    "Expected Results": "1. Password is accepted (meets minimum requirement)\n2. No validation error for password length\n3. Account creation proceeds",
+    "Test Data": "Full Name: Bilal Ahmed\nEmail: bilal.min@test.com\nPassword: Pass@123\nConfirm Password: Pass@123",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_013",
+    "Test Description": "Verify sign up with all fields empty",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Leave all fields empty\n3. Click \"Create Account\" button",
+    "Expected Results": "1. Validation errors displayed for all required fields:\n   - \"Full Name is required\"\n   - \"Email is required\"\n   - \"Password is required\"\n   - \"Confirm Password is required\"\n2. Account is NOT created\n3. Page remains on Sign Up",
+    "Test Data": "Full Name: (empty)\nEmail: (empty)\nPassword: (empty)\nConfirm Password: (empty)",
+    "Priority": "Critical",
+    "Test Type": "Negative"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_014",
+    "Test Description": "Verify sign up with empty Full Name only",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Leave Full Name field empty\n3. Fill Email, Password, Confirm Password with valid data\n4. Click \"Create Account\"",
+    "Expected Results": "1. Validation error for Full Name field (e.g., \"Full Name is required\")\n2. Account is NOT created\n3. Other fields retain their values",
+    "Test Data": "Full Name: (empty)\nEmail: bilal@test.com\nPassword: SecurePass@123\nConfirm Password: SecurePass@123",
+    "Priority": "High",
+    "Test Type": "Negative"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_015",
+    "Test Description": "Verify sign up with empty Email only",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Fill Full Name with valid data\n3. Leave Email field empty\n4. Fill Password and Confirm Password\n5. Click \"Create Account\"",
+    "Expected Results": "1. Validation error for Email field (e.g., \"Email is required\")\n2. Account is NOT created\n3. Other fields retain their values",
+    "Test Data": "Full Name: Bilal Ahmed\nEmail: (empty)\nPassword: SecurePass@123\nConfirm Password: SecurePass@123",
+    "Priority": "High",
+    "Test Type": "Negative"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_016",
+    "Test Description": "Verify sign up with empty Password only",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Fill Full Name and Email with valid data\n3. Leave Password field empty\n4. Fill Confirm Password\n5. Click \"Create Account\"",
+    "Expected Results": "1. Validation error for Password field (e.g., \"Password is required\")\n2. Account is NOT created",
+    "Test Data": "Full Name: Bilal Ahmed\nEmail: bilal@test.com\nPassword: (empty)\nConfirm Password: SecurePass@123",
+    "Priority": "High",
+    "Test Type": "Negative"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_017",
+    "Test Description": "Verify sign up with empty Confirm Password only",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Fill Full Name, Email, and Password\n3. Leave Confirm Password field empty\n4. Click \"Create Account\"",
+    "Expected Results": "1. Validation error for Confirm Password field (e.g., \"Please confirm your password\")\n2. Account is NOT created",
+    "Test Data": "Full Name: Bilal Ahmed\nEmail: bilal@test.com\nPassword: SecurePass@123\nConfirm Password: (empty)",
+    "Priority": "High",
+    "Test Type": "Negative"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_018",
+    "Test Description": "Verify sign up with mismatched passwords",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Fill Full Name and Email\n3. Enter password in Password field\n4. Enter DIFFERENT password in Confirm Password field\n5. Click \"Create Account\"",
+    "Expected Results": "1. Validation error displayed (e.g., \"Passwords do not match\")\n2. Account is NOT created\n3. User can correct the passwords",
+    "Test Data": "Full Name: Bilal Ahmed\nEmail: bilal@test.com\nPassword: SecurePass@123\nConfirm Password: DifferentPass@456",
+    "Priority": "Critical",
+    "Test Type": "Negative"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_019",
+    "Test Description": "Verify sign up with password less than 8 characters",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Fill Full Name and Email\n3. Enter password with less than 8 characters\n4. Enter same password in Confirm Password\n5. Click \"Create Account\"",
+    "Expected Results": "1. Validation error displayed (e.g., \"Password must be at least 8 characters\")\n2. Account is NOT created",
+    "Test Data": "Full Name: Bilal Ahmed\nEmail: bilal@test.com\nPassword: Pass@1\nConfirm Password: Pass@1",
+    "Priority": "Critical",
+    "Test Type": "Negative"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_020",
+    "Test Description": "Verify sign up with password of exactly 7 characters (boundary -1)",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Fill Full Name and Email\n3. Enter password with exactly 7 characters\n4. Confirm the password\n5. Click \"Create Account\"",
+    "Expected Results": "1. Validation error for minimum password length\n2. Account is NOT created\n3. Error message references 8-character minimum",
+    "Test Data": "Full Name: Bilal Ahmed\nEmail: bilal@test.com\nPassword: Pass@12\nConfirm Password: Pass@12",
+    "Priority": "High",
+    "Test Type": "Negative"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_021",
+    "Test Description": "Verify sign up with invalid email formats",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Fill Full Name\n3. Enter invalid email format\n4. Fill Password and Confirm Password\n5. Click \"Create Account\"",
+    "Expected Results": "1. Validation error for Email field (e.g., \"Please enter a valid email\")\n2. Account is NOT created\n3. Form does not submit",
+    "Test Data": "Test with each:\n- \"plaintext\"\n- \"user@\"\n- \"@domain.com\"\n- \"user@.com\"\n- \"user@domain\"\n- \"user name@domain.com\"\n- \"user@@domain.com\"",
+    "Priority": "High",
+    "Test Type": "Negative"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_022",
+    "Test Description": "Verify sign up with already registered email",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Fill Full Name\n3. Enter an email that is already registered\n4. Fill Password and Confirm Password\n5. Click \"Create Account\"",
+    "Expected Results": "1. Error message displayed (e.g., \"Email already registered\" or \"An account with this email already exists\")\n2. Account is NOT created\n3. User is prompted to login or use a different email",
+    "Test Data": "Full Name: Bilal Ahmed\nEmail: existing.user@test.com\nPassword: SecurePass@123\nConfirm Password: SecurePass@123",
+    "Priority": "Critical",
+    "Test Type": "Negative"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_023",
+    "Test Description": "Verify sign up with only spaces in Full Name field",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Enter only spaces in Full Name field\n3. Fill Email, Password, Confirm Password with valid data\n4. Click \"Create Account\"",
+    "Expected Results": "1. Validation error for Full Name (e.g., \"Full Name is required\" or \"Please enter a valid name\")\n2. Account is NOT created\n3. Spaces-only input is not accepted as a valid name",
+    "Test Data": "Full Name: \"     \"\nEmail: bilal@test.com\nPassword: SecurePass@123\nConfirm Password: SecurePass@123",
+    "Priority": "Medium",
+    "Test Type": "Negative"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_024",
+    "Test Description": "Verify sign up with numeric-only Full Name",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Enter only numbers in Full Name field\n3. Fill other fields with valid data\n4. Click \"Create Account\"",
+    "Expected Results": "1. Validation error for Full Name (e.g., \"Please enter a valid name\")\n2. OR account is created (depends on business rules)\n3. Numeric-only names should ideally be rejected",
+    "Test Data": "Full Name: 12345\nEmail: bilal@test.com\nPassword: SecurePass@123\nConfirm Password: SecurePass@123",
+    "Priority": "Medium",
+    "Test Type": "Negative"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_025",
+    "Test Description": "Verify sign up with special characters in Full Name",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Enter special characters (!@#$%^&*) in Full Name field\n3. Fill other fields with valid data\n4. Click \"Create Account\"",
+    "Expected Results": "1. Validation error OR special characters are sanitized\n2. Account should NOT be created with names like \"!@#$%^\"",
+    "Test Data": "Full Name: !@#$%^&*()\nEmail: bilal@test.com\nPassword: SecurePass@123\nConfirm Password: SecurePass@123",
+    "Priority": "Medium",
+    "Test Type": "Negative"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_026",
+    "Test Description": "Verify sign up with extremely long Full Name (255+ chars)",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Enter a very long name (255+ characters)\n3. Fill other fields with valid data\n4. Click \"Create Account\"",
+    "Expected Results": "1. Field either truncates at max allowed length OR\n2. Validation error for exceeding max length\n3. Application does NOT crash",
+    "Test Data": "Full Name: \"A\" x 256\nEmail: bilal@test.com\nPassword: SecurePass@123\nConfirm Password: SecurePass@123",
+    "Priority": "Medium",
+    "Test Type": "Negative"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_027",
+    "Test Description": "Verify sign up with extremely long Email (255+ chars)",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Fill Full Name\n3. Enter extremely long email\n4. Fill Password and Confirm Password\n5. Click \"Create Account\"",
+    "Expected Results": "1. Validation error or field truncation\n2. Application does NOT crash\n3. No server error",
+    "Test Data": "Full Name: Bilal Ahmed\nEmail: \"a\" x 250 + \"@test.com\"\nPassword: SecurePass@123\nConfirm Password: SecurePass@123",
+    "Priority": "Medium",
+    "Test Type": "Negative"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_028",
+    "Test Description": "Verify sign up with password containing only spaces",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Fill Full Name and Email\n3. Enter only spaces in Password field (8+ spaces)\n4. Enter same in Confirm Password\n5. Click \"Create Account\"",
+    "Expected Results": "1. Validation error (e.g., \"Password cannot contain only spaces\")\n2. Account is NOT created\n3. Spaces-only password is rejected",
+    "Test Data": "Full Name: Bilal Ahmed\nEmail: bilal@test.com\nPassword: \"        \" (8 spaces)\nConfirm Password: \"        \" (8 spaces)",
+    "Priority": "High",
+    "Test Type": "Negative"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_029",
+    "Test Description": "Verify sign up with weak password (no special characters/numbers)",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Fill Full Name and Email\n3. Enter a weak password (only lowercase letters, 8+ chars)\n4. Confirm the password\n5. Click \"Create Account\"",
+    "Expected Results": "1. Either: Password accepted (if only min length is enforced) OR\n2. Validation error indicating password strength requirements\n3. Note the actual password policy enforced",
+    "Test Data": "Full Name: Bilal Ahmed\nEmail: bilal@test.com\nPassword: abcdefgh\nConfirm Password: abcdefgh",
+    "Priority": "High",
+    "Test Type": "Negative"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_030",
+    "Test Description": "Verify Confirm Password field case sensitivity",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Fill Full Name and Email\n3. Enter password: \"SecurePass@123\"\n4. Enter confirm password with different case: \"securepass@123\"\n5. Click \"Create Account\"",
+    "Expected Results": "1. Validation error: \"Passwords do not match\"\n2. Account is NOT created\n3. Password comparison is case-sensitive",
+    "Test Data": "Full Name: Bilal Ahmed\nEmail: bilal@test.com\nPassword: SecurePass@123\nConfirm Password: securepass@123",
+    "Priority": "High",
+    "Test Type": "Negative"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_031",
+    "Test Description": "Verify SQL injection in Full Name field",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Enter SQL injection payload in Full Name\n3. Fill other fields with valid data\n4. Click \"Create Account\"",
+    "Expected Results": "1. Application does NOT crash\n2. No database errors exposed\n3. Input is sanitized\n4. Appropriate error message or account created with sanitized name",
+    "Test Data": "Full Name: ' OR 1=1 --\nEmail: sqli@test.com\nPassword: SecurePass@123\nConfirm Password: SecurePass@123",
+    "Priority": "Critical",
+    "Test Type": "Security"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_032",
+    "Test Description": "Verify SQL injection in Email field",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Fill Full Name\n3. Enter SQL injection payload in Email\n4. Fill Password fields\n5. Click \"Create Account\"",
+    "Expected Results": "1. Application does NOT crash\n2. No database errors or unauthorized data access\n3. Input is sanitized\n4. Validation error for invalid email format",
+    "Test Data": "Full Name: Bilal Ahmed\nEmail: ' OR 1=1 --@test.com\nPassword: SecurePass@123\nConfirm Password: SecurePass@123",
+    "Priority": "Critical",
+    "Test Type": "Security"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_033",
+    "Test Description": "Verify XSS attack in Full Name field",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Enter XSS script tag in Full Name\n3. Fill other fields\n4. Click \"Create Account\"",
+    "Expected Results": "1. Script is NOT executed\n2. Input is sanitized/escaped\n3. No alert popup or script execution on any page\n4. If account is created, name is stored safely (escaped)",
+    "Test Data": "Full Name: <script>alert(\"XSS\")</script>\nEmail: xss@test.com\nPassword: SecurePass@123\nConfirm Password: SecurePass@123",
+    "Priority": "Critical",
+    "Test Type": "Security"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_034",
+    "Test Description": "Verify XSS attack in Email field",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Fill Full Name\n3. Enter XSS payload in Email\n4. Fill Password fields\n5. Click \"Create Account\"",
+    "Expected Results": "1. Script is NOT executed\n2. Input is sanitized\n3. Validation error for invalid email format",
+    "Test Data": "Full Name: Bilal Ahmed\nEmail: <script>alert(\"XSS\")</script>\nPassword: SecurePass@123\nConfirm Password: SecurePass@123",
+    "Priority": "Critical",
+    "Test Type": "Security"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_035",
+    "Test Description": "Verify XSS attack in Password field",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Fill Full Name and Email\n3. Enter XSS payload in Password\n4. Enter same in Confirm Password\n5. Click \"Create Account\"",
+    "Expected Results": "1. Script is NOT executed\n2. Input is sanitized/escaped\n3. Application handles malicious input gracefully",
+    "Test Data": "Full Name: Bilal Ahmed\nEmail: bilal@test.com\nPassword: <script>alert(\"XSS\")</script>\nConfirm Password: <script>alert(\"XSS\")</script>",
+    "Priority": "Critical",
+    "Test Type": "Security"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_036",
+    "Test Description": "Verify password is transmitted securely (HTTPS)",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Open browser DevTools → Network tab\n3. Fill all fields with valid data\n4. Click \"Create Account\"\n5. Inspect the network request",
+    "Expected Results": "1. Request is sent via HTTPS (encrypted)\n2. Password is in POST body, NOT in URL/query string\n3. Password is NOT logged in browser console\n4. Password is NOT visible in URL bar",
+    "Test Data": "Full Name: Bilal Ahmed\nEmail: bilal@test.com\nPassword: SecurePass@123\nConfirm Password: SecurePass@123",
+    "Priority": "Critical",
+    "Test Type": "Security"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_037",
+    "Test Description": "Verify HTML injection in Full Name field",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Enter HTML tags in Full Name\n3. Fill other fields\n4. Click \"Create Account\"",
+    "Expected Results": "1. HTML is NOT rendered as markup\n2. Tags are escaped or stripped\n3. If account is created, name displays as plain text",
+    "Test Data": "Full Name: <b>Bold Name</b><img src=x onerror=alert(1)>\nEmail: html@test.com\nPassword: SecurePass@123\nConfirm Password: SecurePass@123",
+    "Priority": "High",
+    "Test Type": "Security"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_038",
+    "Test Description": "Verify rate limiting on registration endpoint",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Submit registration form rapidly 20+ times with different emails\n3. Observe behavior",
+    "Expected Results": "1. After excessive submissions, rate limiting kicks in\n2. Error message: \"Too many requests\" or CAPTCHA appears\n3. Server is protected from abuse/bot registration",
+    "Test Data": "Multiple rapid form submissions",
+    "Priority": "High",
+    "Test Type": "Security"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_039",
+    "Test Description": "Verify no sensitive data in page source",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Right-click → View Page Source\n3. Search for sensitive keywords",
+    "Expected Results": "1. No API keys, tokens, or secrets in page source\n2. No hardcoded credentials\n3. No sensitive backend URLs exposed\n4. No debug information visible",
+    "Test Data": "N/A",
+    "Priority": "Medium",
+    "Test Type": "Security"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_040",
+    "Test Description": "Verify CHIC logo display on Sign Up page",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Observe the top of the page",
+    "Expected Results": "1. Black circular CHIC logo is visible at the top center\n2. Logo is properly rendered (not broken/pixelated)\n3. Logo matches the Login page logo",
+    "Test Data": "N/A",
+    "Priority": "Medium",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_041",
+    "Test Description": "Verify \"Create your account\" heading",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Observe heading text",
+    "Expected Results": "1. \"Create your account\" is displayed in bold, large font\n2. Text is centered below the CHIC logo\n3. Font size is consistent with heading style",
+    "Test Data": "N/A",
+    "Priority": "Low",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_042",
+    "Test Description": "Verify subtitle text \"Join CHIC and discover your perfect style\"",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Observe text below heading",
+    "Expected Results": "1. \"Join CHIC and discover your perfect style\" is displayed\n2. Text is in lighter/grey color\n3. Text is centered below heading",
+    "Test Data": "N/A",
+    "Priority": "Low",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_043",
+    "Test Description": "Verify placeholder texts for all input fields",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Observe each input field without clicking",
+    "Expected Results": "1. Full Name: placeholder \"Enter your full name\" with envelope icon\n2. Email Address: placeholder \"Enter your email\" with envelope icon\n3. Password: placeholder \"Create a password (min 8 characters)\" with lock icon + eye icon\n4. Confirm Password: placeholder \"Confirm your password\" with lock icon + eye icon\n5. All placeholders in grey/light color",
+    "Test Data": "N/A",
+    "Priority": "Medium",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_044",
+    "Test Description": "Verify field labels are displayed above each field",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Observe labels above each input",
+    "Expected Results": "1. \"Full Name\" label above first field\n2. \"Email Address\" label above second field\n3. \"Password\" label above third field\n4. \"Confirm Password\" label above fourth field\n5. Labels are left-aligned and in darker text",
+    "Test Data": "N/A",
+    "Priority": "Low",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_045",
+    "Test Description": "Verify \"Create Account\" button styling",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Observe the Create Account button",
+    "Expected Results": "1. Button is black/dark with white text\n2. Text reads \"Create Account\" with a sparkle/star icon (✨)\n3. Button spans the full width of the form\n4. Button has rounded corners and proper padding",
+    "Test Data": "N/A",
+    "Priority": "Low",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_046",
+    "Test Description": "Verify \"Or continue with\" divider styling",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Observe section between Create Account and Google button",
+    "Expected Results": "1. Horizontal line divider with \"Or continue with\" text centered\n2. Line and text in light grey color\n3. Proper spacing above and below",
+    "Test Data": "N/A",
+    "Priority": "Low",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_047",
+    "Test Description": "Verify \"Sign up with Google\" button styling",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Observe the Google button",
+    "Expected Results": "1. White/outlined button with \"Sign up with Google\" text\n2. Google \"G\" colored logo on the left\n3. Button spans full width of the form\n4. Button has border/outline and rounded corners",
+    "Test Data": "N/A",
+    "Priority": "Low",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_048",
+    "Test Description": "Verify \"Already have an account? Sign in here\" text and link styling",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Observe the bottom of the form",
+    "Expected Results": "1. \"Already have an account?\" is regular text\n2. \"Sign in here\" is a clickable link (underlined/different color)\n3. Text is centered at the bottom of the form card",
+    "Test Data": "N/A",
+    "Priority": "Low",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_049",
+    "Test Description": "Verify form card layout and spacing",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Observe the registration form container",
+    "Expected Results": "1. Form is inside a white card with subtle shadow/border\n2. Form is horizontally centered\n3. All fields have consistent spacing between them\n4. Labels, fields, and buttons are properly aligned",
+    "Test Data": "N/A",
+    "Priority": "Medium",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_050",
+    "Test Description": "Verify responsive design on Mobile (375x812)",
+    "Steps to Execute": "1. Open Sign Up page on mobile device or resize to 375x812\n2. Observe all elements",
+    "Expected Results": "1. Page is fully responsive\n2. Form card adjusts to mobile width\n3. All fields, buttons, and text are visible without horizontal scroll\n4. Touch targets are appropriately sized (min 44x44px)\n5. Virtual keyboard does not obscure active field",
+    "Test Data": "Viewport: 375x812 (iPhone X)",
+    "Priority": "High",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_051",
+    "Test Description": "Verify responsive design on Tablet (768x1024)",
+    "Steps to Execute": "1. Open Sign Up page on tablet or resize to 768x1024\n2. Observe all elements",
+    "Expected Results": "1. Layout adapts to tablet viewport\n2. Form is centered and properly sized\n3. No overlapping elements",
+    "Test Data": "Viewport: 768x1024 (iPad)",
+    "Priority": "Medium",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_052",
+    "Test Description": "Verify Tab order on Sign Up page",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Press Tab key repeatedly\n3. Observe focus movement",
+    "Expected Results": "1. Focus moves in logical order:\n   Full Name → Email → Password → Confirm Password → Create Account → Sign up with Google → Sign in here\n2. Each focused element has visible outline/highlight\n3. No element is skipped",
+    "Test Data": "N/A",
+    "Priority": "Medium",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_053",
+    "Test Description": "Verify field focus visual states",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Click on each field one by one\n3. Observe border/highlight changes",
+    "Expected Results": "1. Active field shows visual indicator (blue border, glow, etc.)\n2. Focus state is clearly different from default state\n3. Labels remain visible when focused\n4. Consistent focus styling across all fields",
+    "Test Data": "N/A",
+    "Priority": "Low",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_054",
+    "Test Description": "Verify Create Account button hover state",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Hover mouse over \"Create Account\" button",
+    "Expected Results": "1. Button shows hover effect (color change, shadow, opacity change)\n2. Cursor changes to pointer\n3. Visual feedback indicates interactivity",
+    "Test Data": "N/A",
+    "Priority": "Low",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_055",
+    "Test Description": "Verify inline validation appears on blur (field exit)",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Click on Full Name field, leave empty, click outside\n3. Click on Email field, enter invalid email, click outside\n4. Click on Password field, enter < 8 chars, click outside",
+    "Expected Results": "1. Validation error appears when leaving field with invalid/empty data\n2. Error message is shown inline below the respective field\n3. Error styling (red text/border) is applied",
+    "Test Data": "N/A",
+    "Priority": "High",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_056",
+    "Test Description": "Verify Sign Up page load time",
+    "Steps to Execute": "1. Open browser DevTools → Network tab\n2. Navigate to Sign Up page\n3. Measure total page load time",
+    "Expected Results": "1. Page fully loads within 3 seconds\n2. First Contentful Paint within 1.5 seconds\n3. No excessive network requests",
+    "Test Data": "Network: Standard broadband",
+    "Priority": "High",
+    "Test Type": "Performance"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_057",
+    "Test Description": "Verify Create Account button disabled during form submission",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Fill all fields with valid data\n3. Click \"Create Account\"\n4. Immediately try clicking the button again",
+    "Expected Results": "1. Button shows loading state (spinner/sparkle animation)\n2. Button is disabled during API call\n3. Double-click does NOT create duplicate accounts\n4. After response: user is redirected or error is shown",
+    "Test Data": "Full Name: Bilal Ahmed\nEmail: bilal.dbl@test.com\nPassword: SecurePass@123\nConfirm Password: SecurePass@123",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_058",
+    "Test Description": "Verify Google Sign Up cancellation handling",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Click \"Sign up with Google\"\n3. When Google popup appears, close it or cancel",
+    "Expected Results": "1. User is returned to Sign Up page\n2. No error or a graceful message is shown\n3. Application does not crash\n4. User can retry",
+    "Test Data": "N/A",
+    "Priority": "Medium",
+    "Test Type": "Negative"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_059",
+    "Test Description": "Verify copy-paste works in all fields",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Copy text and paste into Full Name field\n3. Copy email and paste into Email field\n4. Copy password and paste into Password field\n5. Copy password and paste into Confirm Password field",
+    "Expected Results": "1. Paste works in Full Name and Email fields\n2. Paste works in Password and Confirm Password fields\n3. No formatting issues with pasted content",
+    "Test Data": "Full Name: Bilal Ahmed (pasted)\nEmail: bilal@test.com (pasted)\nPassword: SecurePass@123 (pasted)",
+    "Priority": "Medium",
+    "Test Type": "Positive"
+  },
+  {
+    "Test Case ID": "TC_SIGNUP_060",
+    "Test Description": "Verify password field does not show value in browser autocomplete dropdown",
+    "Steps to Execute": "1. Navigate to Sign Up page\n2. Type in Password field\n3. Submit the form\n4. Navigate back to Sign Up page\n5. Click on Password field",
+    "Expected Results": "1. Password is NOT shown in autocomplete dropdown as plain text\n2. Browser may suggest saved password but never displays it in plaintext in the dropdown",
+    "Test Data": "Password: SecurePass@123",
+    "Priority": "Medium",
+    "Test Type": "Security"
+  }
+]

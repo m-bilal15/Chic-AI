@@ -1,0 +1,74 @@
+
+================================================================================
+GENERATING CHAT FUNCTIONALITY TEST SCRIPTS
+================================================================================
+Total tests to generate: 60
+================================================================================
+
+
+Messaging Tests (15):
+--------------------------------------------------------------------------------
+  [SKIP] TC_CHAT_MSG_001 - Already exists
+  [SKIP] TC_CHAT_MSG_002 - Already exists
+  [SKIP] TC_CHAT_MSG_003 - Already exists
+  [SKIP] TC_CHAT_MSG_004 - Already exists
+  [SKIP] TC_CHAT_MSG_005 - Already exists
+  [SKIP] TC_CHAT_MSG_006 - Already exists
+  [SKIP] TC_CHAT_MSG_007 - Already exists
+  [SKIP] TC_CHAT_MSG_008 - Already exists
+  [SKIP] TC_CHAT_MSG_009 - Already exists
+  [SKIP] TC_CHAT_MSG_010 - Already exists
+  [SKIP] TC_CHAT_MSG_011 - Already exists
+  [SKIP] TC_CHAT_MSG_012 - Already exists
+  [SKIP] TC_CHAT_MSG_013 - Already exists
+  [SKIP] TC_CHAT_MSG_014 - Already exists
+  [SKIP] TC_CHAT_MSG_015 - Already exists
+
+AI Response Tests (15):
+--------------------------------------------------------------------------------
+  [SKIP] TC_CHAT_AI_001 - Already exists
+  [SKIP] TC_CHAT_AI_002 - Already exists
+  [SKIP] TC_CHAT_AI_003 - Already exists
+  [SKIP] TC_CHAT_AI_004 - Already exists
+  [SKIP] TC_CHAT_AI_005 - Already exists
+  [SKIP] TC_CHAT_AI_006 - Already exists
+  [SKIP] TC_CHAT_AI_007 - Already exists
+  [SKIP] TC_CHAT_AI_008 - Already exists
+  [SKIP] TC_CHAT_AI_009 - Already exists
+  [SKIP] TC_CHAT_AI_010 - Already exists
+  [SKIP] TC_CHAT_AI_011 - Already exists
+  [SKIP] TC_CHAT_AI_012 - Already exists
+  [SKIP] TC_CHAT_AI_013 - Already exists
+  [SKIP] TC_CHAT_AI_014 - Already exists
+  [SKIP] TC_CHAT_AI_015 - Already exists
+
+Features Tests (15):
+--------------------------------------------------------------------------------
+  [SKIP] TC_CHAT_FEAT_001 - Already exists
+  [SKIP] TC_CHAT_FEAT_002 - Already exists
+  [SKIP] TC_CHAT_FEAT_003 - Already exists
+  [SKIP] TC_CHAT_FEAT_004 - Already exists
+  [SKIP] TC_CHAT_FEAT_005 - Already exists
+  [SKIP] TC_CHAT_FEAT_006 - Already exists
+  [SKIP] TC_CHAT_FEAT_007 - Already exists
+  [SKIP] TC_CHAT_FEAT_008 - Already exists
+  [SKIP] TC_CHAT_FEAT_009 - Already exists
+  [SKIP] TC_CHAT_FEAT_010 - Already exists
+  [SKIP] TC_CHAT_FEAT_011 - Already exists
+  [SKIP] TC_CHAT_FEAT_012 - Already exists
+  [SKIP] TC_CHAT_FEAT_013 - Already exists
+  [SKIP] TC_CHAT_FEAT_014 - Already exists
+  [SKIP] TC_CHAT_FEAT_015 - Already exists
+
+Personalization Tests (10):
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\usman.GADGET\Downloads\Chic-AI\AutomationTests\python_tests\generate_chat_functionality_tests.py", line 1716, in <module>
+    generate_all_chat_tests()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\usman.GADGET\Downloads\Chic-AI\AutomationTests\python_tests\generate_chat_functionality_tests.py", line 1664, in generate_all_chat_tests
+    script = generate_personalization_test(test)
+  File "C:\Users\usman.GADGET\Downloads\Chic-AI\AutomationTests\python_tests\generate_chat_functionality_tests.py", line 1429, in generate_personalization_test
+    print(f"\\n[FAIL] {e}")
+                       ^
+NameError: name 'e' is not defined

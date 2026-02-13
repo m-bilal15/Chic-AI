@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx playwright test:*)",
+      "Bash(pip install:*)",
+      "Bash(python generate_test_scripts.py:*)",
+      "Bash(python:*)",
+      "Bash(npm run dev:*)",
+      "Bash(curl:*)",
+      "Bash(npx playwright codegen:*)",
+      "Bash(ls:*)",
+      "Bash(for:*)",
+      "Bash(do mkdir -p \"TC_OB_$i\")",
+      "Bash(done)",
+      "Bash(dir:*)",
+      "Bash(do mkdir -p \"$dir\")",
+      "Bash(pytest:*)",
+      "Bash(tee:*)",
+      "Bash(find:*)"
+    ]
+  }
+}

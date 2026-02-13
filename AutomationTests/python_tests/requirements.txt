@@ -1,0 +1,44 @@
+# CHIC-AI Test Automation - Python Dependencies
+# Generated: February 12, 2026
+# Python Version: 3.9+
+
+# Core Testing Framework
+pytest==7.4.3
+pytest-playwright==0.4.3
+playwright==1.40.0
+
+# Reporting
+pytest-html==4.1.1
+pytest-json-report==1.5.0
+allure-pytest==2.13.2
+
+# Parallel Execution
+pytest-xdist==3.5.0
+
+# Configuration & Data
+python-dotenv==1.0.0
+configparser==6.0.0
+
+# Excel/Data Handling
+openpyxl==3.1.2
+pandas==2.1.4
+
+# Utilities
+python-dateutil==2.8.2
+requests==2.31.0
+
+# Logging
+colorlog==6.8.0
+
+# Code Quality (Optional - for development)
+# black==23.12.1
+# pylint==3.0.3
+# pytest-cov==4.1.0
+
+# Installation Instructions:
+# 1. Create virtual environment: python -m venv venv
+# 2. Activate:
+#    - Windows: venv\Scripts\activate
+#    - Mac/Linux: source venv/bin/activate
+# 3. Install: pip install -r requirements.txt
+# 4. Install Playwright browsers: playwright install chromium

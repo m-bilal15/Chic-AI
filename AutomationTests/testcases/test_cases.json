@@ -1,0 +1,452 @@
+[
+  {
+    "Test Case ID": "TC_LOGIN_001",
+    "Test Description": "Verify Login page loads successfully",
+    "Steps to Execute": "1. Open browser\n2. Navigate to https://app.digitalstylist.com\n3. Wait for page to fully load",
+    "Expected Results": "1. Login page loads successfully\n2. CHIC logo is visible at the top\n3. \"Welcome back\" heading is displayed\n4. Subtitle \"CHIC Concierge: Your Personal Stylist On-Demand\" is visible\n5. Login form with Email, Password fields, Sign In button are visible\n6. \"Sign in with Google\" button is visible\n7. \"Don't have an account? Sign up here\" link is visible",
+    "Test Data": "URL: https://app.digitalstylist.com",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_002",
+    "Test Description": "Verify successful login with valid credentials",
+    "Steps to Execute": "1. Navigate to Login page\n2. Enter valid email in \"Email Address\" field\n3. Enter valid password in \"Password\" field\n4. Click \"Sign In\" button",
+    "Expected Results": "1. Loading indicator appears on Sign In button\n2. User is redirected to Dashboard/Home page\n3. User is authenticated and session is created",
+    "Test Data": "Email: bilal@test.com\nPassword: ValidPass@123",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_003",
+    "Test Description": "Verify Email field accepts valid email format",
+    "Steps to Execute": "1. Navigate to Login page\n2. Click on \"Email Address\" input field\n3. Type a valid email address\n4. Click outside the field (blur)",
+    "Expected Results": "1. Email is accepted without any validation error\n2. Field retains the entered value\n3. No red border or error message appears",
+    "Test Data": "Email: user@example.com",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_004",
+    "Test Description": "Verify Password field masks input characters",
+    "Steps to Execute": "1. Navigate to Login page\n2. Click on \"Password\" input field\n3. Type a password",
+    "Expected Results": "1. Characters are masked (shown as dots/bullets)\n2. Actual text is not visible in the field\n3. Eye/visibility toggle icon is visible on the right",
+    "Test Data": "Password: TestPass@123",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_005",
+    "Test Description": "Verify Password visibility toggle (Eye icon)",
+    "Steps to Execute": "1. Navigate to Login page\n2. Enter password in Password field\n3. Click the eye icon (👁) on the right side of Password field\n4. Click the eye icon again",
+    "Expected Results": "1. Initially password is masked (dots)\n2. After clicking eye icon: password text becomes visible in plain text\n3. Eye icon changes state (e.g., open eye to closed eye)\n4. After clicking again: password is masked again",
+    "Test Data": "Password: MySecret@123",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_006",
+    "Test Description": "Verify Sign In with Google button functionality",
+    "Steps to Execute": "1. Navigate to Login page\n2. Click \"Sign in with Google\" button",
+    "Expected Results": "1. Google OAuth popup/redirect appears\n2. Google account selection page is displayed\n3. User can select a Google account to authenticate\n4. After successful Google auth, user is redirected to Dashboard",
+    "Test Data": "Valid Google account credentials",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_007",
+    "Test Description": "Verify \"Sign up here\" link navigation",
+    "Steps to Execute": "1. Navigate to Login page\n2. Locate \"Don't have an account? Sign up here\" text at the bottom\n3. Click \"Sign up here\" link",
+    "Expected Results": "1. User is redirected to the Registration/Sign Up page\n2. URL changes to registration page route\n3. Registration form is displayed",
+    "Test Data": "N/A",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_008",
+    "Test Description": "Verify Email field placeholder text",
+    "Steps to Execute": "1. Navigate to Login page\n2. Observe the Email Address input field without clicking",
+    "Expected Results": "1. Placeholder text \"Enter your email\" is displayed\n2. Email icon (✉) is visible on the left side of the field\n3. Placeholder text is in grey/light color",
+    "Test Data": "N/A",
+    "Priority": "Low",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_009",
+    "Test Description": "Verify Password field placeholder text",
+    "Steps to Execute": "1. Navigate to Login page\n2. Observe the Password input field without clicking",
+    "Expected Results": "1. Placeholder text \"Enter your password\" is displayed\n2. Lock icon (🔒) is visible on the left side of the field\n3. Eye icon (👁) is visible on the right side\n4. Placeholder text is in grey/light color",
+    "Test Data": "N/A",
+    "Priority": "Low",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_010",
+    "Test Description": "Verify login using keyboard (Enter key)",
+    "Steps to Execute": "1. Navigate to Login page\n2. Enter valid email\n3. Press Tab to move to Password field\n4. Enter valid password\n5. Press Enter key",
+    "Expected Results": "1. Tab key moves focus from Email to Password field\n2. Pressing Enter triggers the Sign In action\n3. User is logged in and redirected to Dashboard",
+    "Test Data": "Email: bilal@test.com\nPassword: ValidPass@123",
+    "Priority": "Medium",
+    "Test Type": "Positive"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_011",
+    "Test Description": "Verify login with empty Email and empty Password",
+    "Steps to Execute": "1. Navigate to Login page\n2. Leave Email field empty\n3. Leave Password field empty\n4. Click \"Sign In\" button",
+    "Expected Results": "1. Validation error message displayed for Email field (e.g., \"Email is required\")\n2. Validation error message displayed for Password field (e.g., \"Password is required\")\n3. User is NOT logged in\n4. Page remains on Login",
+    "Test Data": "Email: (empty)\nPassword: (empty)",
+    "Priority": "Critical",
+    "Test Type": "Negative"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_012",
+    "Test Description": "Verify login with valid Email and empty Password",
+    "Steps to Execute": "1. Navigate to Login page\n2. Enter valid email in Email field\n3. Leave Password field empty\n4. Click \"Sign In\" button",
+    "Expected Results": "1. Validation error message displayed for Password field\n2. User is NOT logged in\n3. Email field retains its value",
+    "Test Data": "Email: bilal@test.com\nPassword: (empty)",
+    "Priority": "Critical",
+    "Test Type": "Negative"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_013",
+    "Test Description": "Verify login with empty Email and valid Password",
+    "Steps to Execute": "1. Navigate to Login page\n2. Leave Email field empty\n3. Enter valid password in Password field\n4. Click \"Sign In\" button",
+    "Expected Results": "1. Validation error message displayed for Email field\n2. User is NOT logged in\n3. Password field retains its value (masked)",
+    "Test Data": "Email: (empty)\nPassword: ValidPass@123",
+    "Priority": "Critical",
+    "Test Type": "Negative"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_014",
+    "Test Description": "Verify login with invalid email format",
+    "Steps to Execute": "1. Navigate to Login page\n2. Enter invalid email formats one by one\n3. Enter valid password\n4. Click \"Sign In\" button",
+    "Expected Results": "1. Validation error displayed: \"Please enter a valid email address\" or similar\n2. User is NOT logged in\n3. Form does not submit with invalid email format",
+    "Test Data": "Test with each:\n- \"plaintext\"\n- \"user@\"\n- \"@domain.com\"\n- \"user@.com\"\n- \"user@domain\"\n- \"user name@domain.com\"",
+    "Priority": "High",
+    "Test Type": "Negative"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_015",
+    "Test Description": "Verify login with valid Email and incorrect Password",
+    "Steps to Execute": "1. Navigate to Login page\n2. Enter a valid registered email\n3. Enter an incorrect password\n4. Click \"Sign In\" button",
+    "Expected Results": "1. Error message displayed (e.g., \"Invalid email or password\")\n2. User is NOT logged in\n3. Password field is cleared or retained based on design\n4. No specific hint about which field is wrong (security best practice)",
+    "Test Data": "Email: bilal@test.com\nPassword: WrongPass@999",
+    "Priority": "Critical",
+    "Test Type": "Negative"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_016",
+    "Test Description": "Verify login with unregistered Email",
+    "Steps to Execute": "1. Navigate to Login page\n2. Enter an email that is not registered\n3. Enter any password\n4. Click \"Sign In\" button",
+    "Expected Results": "1. Error message displayed (e.g., \"Invalid email or password\")\n2. User is NOT logged in\n3. Error message should NOT reveal whether the email exists (security)",
+    "Test Data": "Email: nonexistent_user_xyz@test.com\nPassword: AnyPass@123",
+    "Priority": "High",
+    "Test Type": "Negative"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_017",
+    "Test Description": "Verify login with SQL injection in Email field",
+    "Steps to Execute": "1. Navigate to Login page\n2. Enter SQL injection string in Email field\n3. Enter any password\n4. Click \"Sign In\" button",
+    "Expected Results": "1. Application does NOT crash or show database errors\n2. Input is sanitized\n3. Appropriate validation/error message is displayed\n4. No data breach or unauthorized access",
+    "Test Data": "Email: ' OR 1=1 --\nPassword: anything",
+    "Priority": "Critical",
+    "Test Type": "Security"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_018",
+    "Test Description": "Verify login with XSS script in Email field",
+    "Steps to Execute": "1. Navigate to Login page\n2. Enter XSS payload in Email field\n3. Click \"Sign In\" button",
+    "Expected Results": "1. Script is NOT executed\n2. Input is sanitized/escaped\n3. No alert popup or script execution\n4. Proper validation error is shown",
+    "Test Data": "Email: <script>alert(\"XSS\")</script>\nPassword: anything",
+    "Priority": "Critical",
+    "Test Type": "Security"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_019",
+    "Test Description": "Verify login with XSS script in Password field",
+    "Steps to Execute": "1. Navigate to Login page\n2. Enter valid email\n3. Enter XSS payload in Password field\n4. Click \"Sign In\" button",
+    "Expected Results": "1. Script is NOT executed\n2. Input is sanitized/escaped\n3. Application handles malicious input gracefully",
+    "Test Data": "Email: bilal@test.com\nPassword: <script>alert(\"XSS\")</script>",
+    "Priority": "Critical",
+    "Test Type": "Security"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_020",
+    "Test Description": "Verify login with maximum length input in Email field",
+    "Steps to Execute": "1. Navigate to Login page\n2. Enter an extremely long string (255+ characters) in Email field\n3. Click \"Sign In\"",
+    "Expected Results": "1. Field either truncates input at max allowed length OR\n2. Validation error is shown for exceeding max length\n3. Application does NOT crash\n4. No buffer overflow or server error",
+    "Test Data": "Email: \"a\" x 256 + \"@test.com\"\nPassword: ValidPass@123",
+    "Priority": "Medium",
+    "Test Type": "Negative"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_021",
+    "Test Description": "Verify login with maximum length input in Password field",
+    "Steps to Execute": "1. Navigate to Login page\n2. Enter valid email\n3. Enter extremely long string (500+ characters) in Password field\n4. Click \"Sign In\"",
+    "Expected Results": "1. Field either truncates input at max allowed length OR\n2. Validation error is shown\n3. Application does NOT crash",
+    "Test Data": "Email: bilal@test.com\nPassword: \"A\" x 500",
+    "Priority": "Medium",
+    "Test Type": "Negative"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_022",
+    "Test Description": "Verify login with special characters in Email field",
+    "Steps to Execute": "1. Navigate to Login page\n2. Enter email with special characters\n3. Enter valid password\n4. Click \"Sign In\"",
+    "Expected Results": "1. Appropriate validation error for invalid email format\n2. Application handles special characters gracefully",
+    "Test Data": "Email: user!#$%@test.com\nPassword: ValidPass@123",
+    "Priority": "Medium",
+    "Test Type": "Negative"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_023",
+    "Test Description": "Verify login with spaces in Email field",
+    "Steps to Execute": "1. Navigate to Login page\n2. Enter email with leading/trailing spaces\n3. Enter valid password\n4. Click \"Sign In\"",
+    "Expected Results": "1. Application should either trim spaces and process login OR\n2. Show validation error for invalid format\n3. Leading/trailing spaces should not cause unexpected behavior",
+    "Test Data": "Email: \"  bilal@test.com  \"\nPassword: ValidPass@123",
+    "Priority": "Medium",
+    "Test Type": "Negative"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_024",
+    "Test Description": "Verify case sensitivity of Email field",
+    "Steps to Execute": "1. Navigate to Login page\n2. Enter registered email in UPPERCASE\n3. Enter correct password\n4. Click \"Sign In\"",
+    "Expected Results": "1. Login should succeed (email is typically case-insensitive)\n2. User is redirected to Dashboard",
+    "Test Data": "Email: BILAL@TEST.COM\nPassword: ValidPass@123",
+    "Priority": "Medium",
+    "Test Type": "Positive"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_025",
+    "Test Description": "Verify case sensitivity of Password field",
+    "Steps to Execute": "1. Navigate to Login page\n2. Enter valid email\n3. Enter password with incorrect case\n4. Click \"Sign In\"",
+    "Expected Results": "1. Login should FAIL (passwords are case-sensitive)\n2. Error message is displayed\n3. User is NOT logged in",
+    "Test Data": "Email: bilal@test.com\nPassword: validpass@123 (lowercase instead of ValidPass@123)",
+    "Priority": "High",
+    "Test Type": "Negative"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_026",
+    "Test Description": "Verify CHIC logo is displayed correctly",
+    "Steps to Execute": "1. Navigate to Login page\n2. Observe the top of the page",
+    "Expected Results": "1. Black circular CHIC logo is visible at the top center\n2. Logo is properly rendered (not broken/pixelated)\n3. Logo is appropriately sized",
+    "Test Data": "N/A",
+    "Priority": "Medium",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_027",
+    "Test Description": "Verify \"Welcome back\" heading text and styling",
+    "Steps to Execute": "1. Navigate to Login page\n2. Observe the heading below the logo",
+    "Expected Results": "1. \"Welcome back\" text is displayed in bold\n2. Text is centered on the page\n3. Font size is larger than body text (heading style)",
+    "Test Data": "N/A",
+    "Priority": "Low",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_028",
+    "Test Description": "Verify subtitle text",
+    "Steps to Execute": "1. Navigate to Login page\n2. Observe text below \"Welcome back\"",
+    "Expected Results": "1. \"CHIC Concierge: Your Personal Stylist On-Demand\" is displayed\n2. Text is in lighter/grey color\n3. Text is centered",
+    "Test Data": "N/A",
+    "Priority": "Low",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_029",
+    "Test Description": "Verify Login form card layout and styling",
+    "Steps to Execute": "1. Navigate to Login page\n2. Observe the login form container",
+    "Expected Results": "1. Form is contained within a white card/box with subtle shadow/border\n2. Form is centered on the page\n3. Fields are properly spaced\n4. Labels \"Email Address\" and \"Password\" are above their respective fields",
+    "Test Data": "N/A",
+    "Priority": "Medium",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_030",
+    "Test Description": "Verify Sign In button styling",
+    "Steps to Execute": "1. Navigate to Login page\n2. Observe the \"Sign In\" button",
+    "Expected Results": "1. Button is black/dark with white text\n2. Button text reads \"Sign In\" with a sparkle/star icon\n3. Button spans the full width of the form\n4. Button has appropriate padding and rounded corners",
+    "Test Data": "N/A",
+    "Priority": "Low",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_031",
+    "Test Description": "Verify \"Or continue with\" divider",
+    "Steps to Execute": "1. Navigate to Login page\n2. Observe section between Sign In and Google button",
+    "Expected Results": "1. Horizontal line divider with \"Or continue with\" text in the middle\n2. Text and line are in light grey\n3. Properly centered and spaced",
+    "Test Data": "N/A",
+    "Priority": "Low",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_032",
+    "Test Description": "Verify Sign in with Google button styling",
+    "Steps to Execute": "1. Navigate to Login page\n2. Observe the Google sign-in button",
+    "Expected Results": "1. White/outlined button with \"Sign in with Google\" text\n2. Google \"G\" logo/icon is displayed on the left\n3. Button spans full width of the form\n4. Button has border/outline and rounded corners",
+    "Test Data": "N/A",
+    "Priority": "Low",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_033",
+    "Test Description": "Verify \"Don't have an account? Sign up here\" text and link",
+    "Steps to Execute": "1. Navigate to Login page\n2. Observe the bottom of the login form",
+    "Expected Results": "1. \"Don't have an account?\" is displayed as regular text\n2. \"Sign up here\" is displayed as a clickable link (underlined or different color)\n3. Text is centered below the Google button",
+    "Test Data": "N/A",
+    "Priority": "Low",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_034",
+    "Test Description": "Verify Login page responsiveness on Mobile (375x812)",
+    "Steps to Execute": "1. Open Login page on mobile device or resize browser to 375x812\n2. Observe all elements",
+    "Expected Results": "1. Page is fully responsive\n2. Form card adjusts to mobile width\n3. All fields, buttons, and text are properly visible\n4. No horizontal scrollbar\n5. Touch targets are appropriately sized",
+    "Test Data": "Viewport: 375x812 (iPhone X)",
+    "Priority": "High",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_035",
+    "Test Description": "Verify Login page responsiveness on Tablet (768x1024)",
+    "Steps to Execute": "1. Open Login page on tablet or resize browser to 768x1024\n2. Observe all elements",
+    "Expected Results": "1. Page layout adapts to tablet viewport\n2. Form is centered and properly sized\n3. All elements are accessible and visible",
+    "Test Data": "Viewport: 768x1024 (iPad)",
+    "Priority": "Medium",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_036",
+    "Test Description": "Verify Tab order on Login page",
+    "Steps to Execute": "1. Navigate to Login page\n2. Press Tab key repeatedly\n3. Observe focus movement",
+    "Expected Results": "1. Focus moves in logical order: Email → Password → Sign In → Sign in with Google → Sign up here\n2. Focused elements have visible outline/highlight\n3. No element is skipped",
+    "Test Data": "N/A",
+    "Priority": "Medium",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_037",
+    "Test Description": "Verify field focus states",
+    "Steps to Execute": "1. Navigate to Login page\n2. Click on Email field\n3. Click on Password field",
+    "Expected Results": "1. Active/focused field shows visual indicator (blue border, highlight, etc.)\n2. Focus state is clearly distinguishable from unfocused state\n3. Label remains visible when field is focused",
+    "Test Data": "N/A",
+    "Priority": "Low",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_038",
+    "Test Description": "Verify Sign In button hover state",
+    "Steps to Execute": "1. Navigate to Login page\n2. Hover mouse over \"Sign In\" button",
+    "Expected Results": "1. Button shows hover effect (color change, shadow, cursor change to pointer)\n2. Visual feedback indicates the button is interactive",
+    "Test Data": "N/A",
+    "Priority": "Low",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_039",
+    "Test Description": "Verify brute force protection (Account lockout)",
+    "Steps to Execute": "1. Navigate to Login page\n2. Enter valid email\n3. Enter incorrect password\n4. Click \"Sign In\"\n5. Repeat steps 3-4 five or more times",
+    "Expected Results": "1. After multiple failed attempts (e.g., 5), account is temporarily locked\n2. Appropriate message displayed (e.g., \"Too many attempts. Please try again in X minutes\")\n3. OR CAPTCHA is triggered after multiple failures",
+    "Test Data": "Email: bilal@test.com\nPassword: Wrong1, Wrong2, Wrong3, Wrong4, Wrong5",
+    "Priority": "Critical",
+    "Test Type": "Security"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_040",
+    "Test Description": "Verify password is not visible in page source/network requests",
+    "Steps to Execute": "1. Navigate to Login page\n2. Open browser Developer Tools → Network tab\n3. Enter email and password\n4. Click \"Sign In\"\n5. Inspect the request payload",
+    "Expected Results": "1. Password is NOT sent as plain text in URL (query parameter)\n2. Request is sent via HTTPS (encrypted)\n3. Password is sent in POST body, not GET parameters\n4. Password is not visible in browser address bar",
+    "Test Data": "Email: bilal@test.com\nPassword: ValidPass@123",
+    "Priority": "Critical",
+    "Test Type": "Security"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_041",
+    "Test Description": "Verify Login page loads over HTTPS",
+    "Steps to Execute": "1. Navigate to https://app.digitalstylist.com\n2. Check browser address bar\n3. Observe SSL certificate",
+    "Expected Results": "1. Page loads over HTTPS\n2. Browser shows lock/secure icon\n3. No mixed content warnings\n4. HTTP requests are redirected to HTTPS",
+    "Test Data": "URL: https://app.digitalstylist.com",
+    "Priority": "Critical",
+    "Test Type": "Security"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_042",
+    "Test Description": "Verify Login page load time (Performance)",
+    "Steps to Execute": "1. Open browser Developer Tools → Network tab\n2. Navigate to Login page\n3. Measure total page load time",
+    "Expected Results": "1. Page fully loads within 3 seconds on standard broadband\n2. First Contentful Paint (FCP) within 1.5 seconds\n3. No excessive/unnecessary network requests",
+    "Test Data": "Network: Standard broadband (50 Mbps)",
+    "Priority": "High",
+    "Test Type": "Performance"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_043",
+    "Test Description": "Verify Copy-Paste functionality in Email field",
+    "Steps to Execute": "1. Navigate to Login page\n2. Copy an email address from clipboard\n3. Paste it into the Email field",
+    "Expected Results": "1. Email is pasted correctly\n2. No formatting issues\n3. Field accepts pasted content",
+    "Test Data": "Email: bilal@test.com (copied from clipboard)",
+    "Priority": "Medium",
+    "Test Type": "Positive"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_044",
+    "Test Description": "Verify Copy-Paste is handled in Password field",
+    "Steps to Execute": "1. Navigate to Login page\n2. Enter a password\n3. Try to copy the password from the field\n4. Try to paste a password into the field",
+    "Expected Results": "1. Pasting into password field should work\n2. Copying from password field should be blocked (security) OR return masked text\n3. Application handles clipboard actions without errors",
+    "Test Data": "Password: TestPass@123",
+    "Priority": "Medium",
+    "Test Type": "Security"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_045",
+    "Test Description": "Verify browser auto-fill/autocomplete for login",
+    "Steps to Execute": "1. Navigate to Login page with saved credentials in browser\n2. Click on Email field\n3. Observe browser autocomplete suggestions",
+    "Expected Results": "1. Browser autocomplete suggestions appear (if previously saved)\n2. Selecting a saved credential populates both Email and Password fields\n3. Login works normally with auto-filled data",
+    "Test Data": "Previously saved credentials in browser",
+    "Priority": "Low",
+    "Test Type": "Positive"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_046",
+    "Test Description": "Verify Google Sign-In cancellation",
+    "Steps to Execute": "1. Navigate to Login page\n2. Click \"Sign in with Google\"\n3. When Google popup appears, close it or click Cancel",
+    "Expected Results": "1. User is returned to Login page\n2. No error displayed or a graceful message is shown\n3. Application does not crash\n4. User can retry login",
+    "Test Data": "N/A",
+    "Priority": "Medium",
+    "Test Type": "Negative"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_047",
+    "Test Description": "Verify simultaneous login from multiple tabs",
+    "Steps to Execute": "1. Open Login page in Tab 1\n2. Open Login page in Tab 2\n3. Login with valid credentials in Tab 1\n4. Attempt to login in Tab 2",
+    "Expected Results": "1. First login succeeds\n2. Second tab either auto-redirects to Dashboard (session detected) OR allows second login\n3. No conflicting sessions or errors",
+    "Test Data": "Email: bilal@test.com\nPassword: ValidPass@123",
+    "Priority": "Medium",
+    "Test Type": "Positive"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_048",
+    "Test Description": "Verify back button after successful login",
+    "Steps to Execute": "1. Navigate to Login page\n2. Login with valid credentials\n3. After redirect to Dashboard, click browser Back button",
+    "Expected Results": "1. User should NOT be taken back to Login page (since already authenticated)\n2. User either stays on Dashboard or is redirected back to Dashboard\n3. Login page should not be accessible while authenticated",
+    "Test Data": "Email: bilal@test.com\nPassword: ValidPass@123",
+    "Priority": "High",
+    "Test Type": "Security"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_049",
+    "Test Description": "Verify Login page URL cannot access Dashboard without authentication",
+    "Steps to Execute": "1. Open a new browser (no session)\n2. Directly navigate to Dashboard URL (e.g., /dashboard)\n3. Observe behavior",
+    "Expected Results": "1. User is redirected to Login page\n2. Dashboard content is NOT displayed without authentication\n3. Appropriate redirect occurs",
+    "Test Data": "URL: https://app.digitalstylist.com/dashboard",
+    "Priority": "Critical",
+    "Test Type": "Security"
+  },
+  {
+    "Test Case ID": "TC_LOGIN_050",
+    "Test Description": "Verify Sign In button disabled state during API call",
+    "Steps to Execute": "1. Navigate to Login page\n2. Enter valid email and password\n3. Click \"Sign In\"\n4. Observe button state during loading",
+    "Expected Results": "1. Sign In button shows loading state (spinner/sparkle animation)\n2. Button is disabled to prevent double-click/multiple submissions\n3. After response: button returns to normal or user is redirected",
+    "Test Data": "Email: bilal@test.com\nPassword: ValidPass@123",
+    "Priority": "High",
+    "Test Type": "Positive"
+  }
+]

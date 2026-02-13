@@ -1,0 +1,259 @@
+{
+  "description": "Test data for chat page testing",
+  "version": "1.0",
+  "created": "2026-02-12",
+
+  "valid_messages": {
+    "greetings": [
+      "Hello",
+      "Hi there",
+      "Good morning",
+      "Hey",
+      "Greetings"
+    ],
+    "style_questions": [
+      "What should I wear to a wedding?",
+      "Can you help me find the perfect outfit?",
+      "I need styling advice for a job interview",
+      "What colors look good on me?",
+      "Help me choose an outfit for a date night",
+      "What style suits my body type?",
+      "I need help with my wardrobe",
+      "Can you recommend some outfits?",
+      "What should I wear in summer?",
+      "Help me dress for a formal event"
+    ],
+    "product_questions": [
+      "Show me some dress options",
+      "I need new shoes",
+      "Can you recommend a handbag?",
+      "What accessories should I add?",
+      "I'm looking for casual wear",
+      "Show me professional attire",
+      "I need workout clothes",
+      "Recommend some jewelry"
+    ],
+    "personalization_questions": [
+      "Based on my style profile, what do you recommend?",
+      "What colors from my preferences would work?",
+      "Can you suggest outfits for my body type?",
+      "What styles match my preferences?",
+      "Remember my favorite colors?",
+      "Use my style profile to help"
+    ],
+    "general_questions": [
+      "How does this service work?",
+      "Can you see my style profile?",
+      "What can you help me with?",
+      "Tell me about your features",
+      "How do I upload photos?"
+    ]
+  },
+
+  "invalid_messages": {
+    "empty": "",
+    "only_spaces": "     ",
+    "only_newlines": "\n\n\n",
+    "very_long": "This is a very long message that contains many characters. ".repeat(100),
+    "special_characters_only": "!@#$%^&*()",
+    "numbers_only": "123456789",
+    "single_character": "a"
+  },
+
+  "edge_case_messages": {
+    "single_character": "a",
+    "max_length": "This message tests the maximum character limit for the chat input field. ".repeat(20),
+    "with_emojis": "I love this! 😍 Can you help me? 👗",
+    "with_urls": "Check this out: https://example.com/outfit",
+    "with_email": "Contact me at test@example.com",
+    "with_numbers": "I need 5 outfits for a 3-day trip",
+    "mixed_case": "HeLLo CaN YoU HeLp Me?",
+    "with_quotes": "I want a \"professional\" look",
+    "with_apostrophes": "I'm looking for summer's best trends",
+    "with_newlines": "Line 1\nLine 2\nLine 3",
+    "with_tabs": "Column1\tColumn2\tColumn3",
+    "multiple_spaces": "Hello     there     how     are     you",
+    "special_chars": "What about this & that, or this/that?"
+  },
+
+  "security_test_messages": {
+    "sql_injection": "'; DROP TABLE messages; --",
+    "xss_script": "<script>alert('XSS')</script>",
+    "xss_image": "<img src=x onerror=alert('XSS')>",
+    "html_injection": "<h1>Injected HTML</h1>",
+    "javascript_url": "javascript:alert('test')",
+    "sql_union": "' UNION SELECT * FROM users--"
+  },
+
+  "conversation_flows": {
+    "complete_styling_session": [
+      "Hello, I need help with my style",
+      "I have a wedding to attend next month",
+      "What colors would you recommend?",
+      "Can you show me some dress options?",
+      "I prefer modest styles",
+      "What accessories should I add?",
+      "Thank you for your help!"
+    ],
+    "quick_question": [
+      "Quick question",
+      "What should I wear to a job interview?",
+      "Thanks!"
+    ],
+    "exploration_flow": [
+      "What can you help me with?",
+      "Tell me more about styling services",
+      "How do I get started?",
+      "Can I upload photos?"
+    ]
+  },
+
+  "expected_ai_keywords": {
+    "greeting_response": [
+      "hello",
+      "hi",
+      "welcome",
+      "help",
+      "style",
+      "assist"
+    ],
+    "style_advice_response": [
+      "recommend",
+      "suggest",
+      "outfit",
+      "wear",
+      "style",
+      "color",
+      "perfect"
+    ],
+    "personalized_response": [
+      "body type",
+      "preference",
+      "profile",
+      "color",
+      "style",
+      "suit"
+    ]
+  },
+
+  "image_upload_test_data": {
+    "valid_images": [
+      "test_outfit_1.jpg",
+      "test_outfit_2.png",
+      "test_outfit_3.jpeg"
+    ],
+    "invalid_files": [
+      "test_document.pdf",
+      "test_file.txt",
+      "test_data.json"
+    ],
+    "large_file": "large_image_10mb.jpg",
+    "invalid_format": "image.bmp"
+  },
+
+  "performance_test_data": {
+    "rapid_messages": [
+      "Message 1",
+      "Message 2",
+      "Message 3",
+      "Message 4",
+      "Message 5"
+    ],
+    "long_conversation": [
+      "Start of conversation",
+      "Question 1",
+      "Follow up 1",
+      "Question 2",
+      "Follow up 2",
+      "Question 3",
+      "Follow up 3",
+      "Question 4",
+      "Follow up 4",
+      "Question 5",
+      "Follow up 5",
+      "End of conversation"
+    ]
+  },
+
+  "personalization_keywords": {
+    "body_types": [
+      "hourglass",
+      "pear",
+      "apple",
+      "rectangle",
+      "athletic"
+    ],
+    "colors": [
+      "red",
+      "blue",
+      "black",
+      "white",
+      "green",
+      "pink",
+      "purple",
+      "yellow",
+      "orange",
+      "brown",
+      "grey",
+      "navy"
+    ],
+    "styles": [
+      "casual",
+      "formal",
+      "business",
+      "elegant",
+      "minimalist",
+      "bohemian",
+      "classic",
+      "trendy",
+      "sporty",
+      "romantic"
+    ]
+  },
+
+  "test_scenarios": {
+    "new_user_first_chat": {
+      "description": "New user starting first conversation",
+      "messages": [
+        "Hi, I'm new here",
+        "Can you help me find my style?",
+        "I'm not sure what looks good on me"
+      ],
+      "expected_response_contains": ["welcome", "help", "style", "profile"]
+    },
+    "returning_user": {
+      "description": "Returning user with existing profile",
+      "messages": [
+        "Hello again",
+        "Based on my previous choices, what do you suggest?"
+      ],
+      "expected_response_contains": ["preferences", "profile", "recommend"]
+    },
+    "urgent_event": {
+      "description": "User needs outfit for urgent event",
+      "messages": [
+        "I have an event tonight!",
+        "Need an outfit ASAP",
+        "Something elegant and classy"
+      ],
+      "expected_response_contains": ["outfit", "elegant", "suggest", "recommend"]
+    }
+  },
+
+  "error_scenarios": {
+    "network_failure": {
+      "description": "Simulated network disconnection",
+      "action": "disconnect_network",
+      "expected": "error_message_displayed"
+    },
+    "slow_response": {
+      "description": "AI takes long time to respond",
+      "timeout": 30000,
+      "expected": "loading_indicator_or_timeout_message"
+    },
+    "invalid_response": {
+      "description": "AI returns invalid/corrupted response",
+      "expected": "error_handling_graceful"
+    }
+  }
+}

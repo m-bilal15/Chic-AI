@@ -1,0 +1,68 @@
+{
+  "description": "Valid test data for onboarding questionnaire",
+
+  "complete_flow_scenario_1": {
+    "description": "Happy path - Complete onboarding flow",
+    "step1_body_type": "Hourglass",
+    "step2_highlight_areas": ["Waist", "Legs"],
+    "step3_minimize_areas": ["Midsection"],
+    "step4_favorite_colors": ["Black", "White", "Navy Blue", "Red", "Beige", "Gold"],
+    "step5_style_descriptions": ["Chic", "Classic", "Minimalist"]
+  },
+
+  "complete_flow_scenario_2": {
+    "description": "Alternative valid flow",
+    "step1_body_type": "Pear",
+    "step2_highlight_areas": ["Shoulders"],
+    "step3_minimize_areas": ["Hips", "Thighs"],
+    "step4_favorite_colors": ["Black", "White", "Red"],
+    "step5_style_descriptions": ["Bohemian", "Romantic"]
+  },
+
+  "body_types": [
+    "Hourglass",
+    "Pear",
+    "Apple",
+    "Rectangle",
+    "Inverted Triangle"
+  ],
+
+  "highlight_areas": [
+    "Shoulders",
+    "Waist",
+    "Legs",
+    "Bust",
+    "Arms"
+  ],
+
+  "minimize_areas": [
+    "Midsection",
+    "Arms",
+    "Hips",
+    "Thighs"
+  ],
+
+  "favorite_colors": [
+    "Black",
+    "White",
+    "Navy Blue",
+    "Red",
+    "Beige",
+    "Cream",
+    "Gold",
+    "Silver",
+    "Pink",
+    "Green"
+  ],
+
+  "style_descriptions": [
+    "Chic",
+    "Classic",
+    "Minimalist",
+    "Bohemian",
+    "Edgy",
+    "Romantic",
+    "Casual",
+    "Elegant"
+  ]
+}

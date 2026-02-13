@@ -1,0 +1,57 @@
+{
+  "logo": {
+    "selector": "img",
+    "alt": "CHIC Logo",
+    "xpath": "//img[@alt=\"CHIC Logo\"]",
+    "found": true
+  },
+  "welcome_heading": {
+    "text": "Welcome back",
+    "xpath": "//h1[text()=\"Welcome back\"] | //h2[text()=\"Welcome back\"]",
+    "found": true
+  },
+  "subtitle": {
+    "text": "CHIC Concierge: Your Personal Stylist On-Demand",
+    "selector": "text=\"CHIC Concierge: Your Personal Stylist On-Demand\"",
+    "found": true
+  },
+  "email_input": {
+    "type": "email",
+    "placeholder": "Enter your email",
+    "name": "email",
+    "selector": "input[type=\"email\"]",
+    "placeholder_selector": "input[placeholder=\"Enter your email\"]",
+    "found": true
+  },
+  "password_input": {
+    "type": "password",
+    "placeholder": "Enter your password",
+    "name": "password",
+    "selector": "input[type=\"password\"]",
+    "placeholder_selector": "input[placeholder=\"Enter your password\"]",
+    "found": true
+  },
+  "sign_in_button": {
+    "text": "Sign In",
+    "role": "button",
+    "selector": "button:has-text(\"Sign In\")",
+    "xpath": "//button[contains(text(), \"Sign In\")]",
+    "found": true
+  },
+  "google_button": {
+    "text": "Sign in with Google",
+    "selector": "text=\"Sign in with Google\"",
+    "found": true
+  },
+  "sign_up": {
+    "text": "Sign up here",
+    "tag": "BUTTON",
+    "selector": "button:has-text(\"Sign up here\")",
+    "found": true
+  },
+  "divider": {
+    "text": "Or continue with",
+    "selector": "text=\"Or continue with\"",
+    "found": true
+  }
+}

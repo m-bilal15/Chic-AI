@@ -1,0 +1,602 @@
+[
+  {
+    "Sheet": "Welcome Tour",
+    "Test Case ID": "TC_TOUR_001",
+    "Test Description": "Verify Welcome Tour modal appears on first login after onboarding",
+    "Steps to Execute": "1. Complete onboarding questionnaire\n2. Get redirected to Dashboard (app.digitalstylist.com/chat)\n3. Observe the page",
+    "Expected Results": "1. Welcome Tour modal appears automatically\n2. Modal overlays the Dashboard\n3. Step 1 of 7 is displayed\n4. Background is dimmed/overlaid\n5. Modal shows chat icon, \"Welcome to CHIC Concierge!\" heading",
+    "Test Data": "URL: https://app.digitalstylist.com/chat",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Welcome Tour",
+    "Test Case ID": "TC_TOUR_002",
+    "Test Description": "Verify Tour Step 1 - Welcome to CHIC Concierge",
+    "Steps to Execute": "1. Observe Tour Step 1 modal content",
+    "Expected Results": "1. Chat icon (💬) displayed at top\n2. Heading: \"Welcome to CHIC Concierge!\"\n3. Body: \"Ready for a little style magic? Let's take a quick tour of your on-demand stylist. This will only take a minute, I promise.\"\n4. \"Step 1 of 7\" with \"14%\" progress\n5. Progress bar shows ~14% filled\n6. \"Skip Tour\" link on bottom left\n7. \"Next →\" button on bottom right",
+    "Test Data": "N/A",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Welcome Tour",
+    "Test Case ID": "TC_TOUR_003",
+    "Test Description": "Verify Tour Step 2 - Style Chat (highlights sidebar)",
+    "Steps to Execute": "1. On Tour Step 1, click \"Next →\"\n2. Observe Step 2",
+    "Expected Results": "1. Modal moves/points to \"Style Chat\" in left sidebar\n2. \"Style Chat\" nav item is highlighted/outlined in sidebar\n3. Heading: \"Style Chat\"\n4. Body: \"Ask away! Outfit ideas, styling tips, fashion questions, or even shopping recommendations—your virtual stylist is ready for them all.\"\n5. \"Step 2 of 7\" - \"29%\"\n6. \"Back\" and \"Next →\" buttons visible\n7. X close button visible",
+    "Test Data": "N/A",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Welcome Tour",
+    "Test Case ID": "TC_TOUR_004",
+    "Test Description": "Verify Tour Step 3 - Outfit Check (highlights Upload Outfit)",
+    "Steps to Execute": "1. On Step 2, click \"Next →\"\n2. Observe Step 3",
+    "Expected Results": "1. Modal points to \"Upload Outfit\" button at bottom of chat\n2. Camera icon (📷) displayed\n3. Heading: \"Outfit Check\"\n4. Body: \"Take a photo of your look and get instant feedback, style ideas, and smart suggestions\"\n5. \"Step 3 of 7\" - \"43%\"\n6. \"Upload Outfit\" button in footer is highlighted",
+    "Test Data": "N/A",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Welcome Tour",
+    "Test Case ID": "TC_TOUR_005",
+    "Test Description": "Verify Tour Step 4 - Your Digital Closet (highlights My Wardrobe)",
+    "Steps to Execute": "1. On Step 3, click \"Next →\"\n2. Observe Step 4",
+    "Expected Results": "1. Modal points to \"My Wardrobe\" in left sidebar\n2. Closet/hanger icon displayed\n3. Heading: \"Your Digital Closet\"\n4. Body: \"Add pieces you own to your digital closet and get personalized outfit recommendations. The best part? You won't run out of closet space!\"\n5. \"Step 4 of 7\" - \"57%\"\n6. \"My Wardrobe\" nav item is highlighted",
+    "Test Data": "N/A",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Welcome Tour",
+    "Test Case ID": "TC_TOUR_006",
+    "Test Description": "Verify Tour Step 5 - Shop Curated Pieces (highlights Shop)",
+    "Steps to Execute": "1. On Step 4, click \"Next →\"\n2. Observe Step 5",
+    "Expected Results": "1. Modal points to \"Shop\" in left sidebar\n2. Shopping bag icon displayed\n3. Heading: \"Shop Curated Pieces\"\n4. Body: \"Shopping can be overwhelming so we picked the best pieces for you! Search and explore handpicked, stylist-approved pieces to fill your closet gaps—fun, easy, and totally stress-free.\"\n5. \"Step 5 of 7\" - \"71%\"\n6. \"Shop\" nav item is highlighted",
+    "Test Data": "N/A",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Welcome Tour",
+    "Test Case ID": "TC_TOUR_007",
+    "Test Description": "Verify Tour Step 6 - Your Style Profile (highlights Basic Profile)",
+    "Steps to Execute": "1. On Step 5, click \"Next →\"\n2. Observe Step 6",
+    "Expected Results": "1. Modal points to \"Basic Profile\" button in chat footer\n2. Profile/person icon displayed\n3. Heading: \"Your Style Profile\"\n4. Body: \"Here's where you update your measurements, colors, and style likes—your on-demand stylist uses this info to make recommendations that fit perfectly.\"\n5. \"Step 6 of 7\" - \"86%\"\n6. \"Basic Profile\" button is highlighted",
+    "Test Data": "N/A",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Welcome Tour",
+    "Test Case ID": "TC_TOUR_008",
+    "Test Description": "Verify Tour Step 7 - Settings & More (highlights Settings)",
+    "Steps to Execute": "1. On Step 6, click \"Next →\"\n2. Observe Step 7",
+    "Expected Results": "1. Modal points to \"Settings\" in left sidebar\n2. Gear/settings icon (⚙) displayed\n3. Heading: \"Settings & More\"\n4. Body: \"Manage your account, subscription, and preferences from here.\"\n5. \"Step 7 of 7\" - \"100%\"\n6. Progress bar fully filled\n7. Button changed to \"✓ Get Started\" (not \"Next\")\n8. \"Settings\" nav item is highlighted",
+    "Test Data": "N/A",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Welcome Tour",
+    "Test Case ID": "TC_TOUR_009",
+    "Test Description": "Verify \"Get Started\" button completes the tour",
+    "Steps to Execute": "1. Navigate to Tour Step 7\n2. Click \"✓ Get Started\" button",
+    "Expected Results": "1. Tour modal closes\n2. Dashboard is fully accessible (no overlay)\n3. All UI elements are interactive\n4. Tour is marked as completed (should not show again on refresh)",
+    "Test Data": "N/A",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Welcome Tour",
+    "Test Case ID": "TC_TOUR_010",
+    "Test Description": "Verify complete tour flow end-to-end (all 7 steps)",
+    "Steps to Execute": "1. Start at Step 1, click \"Next →\"\n2. Step 2 → Next\n3. Step 3 → Next\n4. Step 4 → Next\n5. Step 5 → Next\n6. Step 6 → Next\n7. Step 7 → \"Get Started\"",
+    "Expected Results": "1. All 7 steps display in correct order\n2. Progress bar increments: 14% → 29% → 43% → 57% → 71% → 86% → 100%\n3. Step counter updates: 1 of 7 → 2 of 7 → ... → 7 of 7\n4. Each step highlights the correct UI element\n5. Tour completes and Dashboard is fully usable",
+    "Test Data": "N/A",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Welcome Tour",
+    "Test Case ID": "TC_TOUR_011",
+    "Test Description": "Verify \"Skip Tour\" on Step 1 closes tour entirely",
+    "Steps to Execute": "1. On Tour Step 1, click \"Skip Tour\"",
+    "Expected Results": "1. Tour modal closes immediately\n2. Dashboard is fully accessible\n3. Tour does not continue to Step 2\n4. Tour may be marked as completed or may reappear on next login (verify behavior)",
+    "Test Data": "N/A",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Welcome Tour",
+    "Test Case ID": "TC_TOUR_012",
+    "Test Description": "Verify \"Back\" button navigates to previous tour step",
+    "Steps to Execute": "1. Navigate to Tour Step 3\n2. Click \"Back\"\n3. Observe navigation",
+    "Expected Results": "1. User goes back to Step 2\n2. Step 2 content is displayed correctly\n3. Progress bar reverts to 29%\n4. Back button works on Steps 2-7\n5. Step 1 has \"Skip Tour\" instead of \"Back\"",
+    "Test Data": "N/A",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Welcome Tour",
+    "Test Case ID": "TC_TOUR_013",
+    "Test Description": "Verify X (close) button on tour modal",
+    "Steps to Execute": "1. On any Tour step (e.g., Step 3)\n2. Click the X button on top right of modal",
+    "Expected Results": "1. Tour modal closes\n2. Dashboard is accessible\n3. Tour dismisses at the current step",
+    "Test Data": "N/A",
+    "Priority": "Medium",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Welcome Tour",
+    "Test Case ID": "TC_TOUR_014",
+    "Test Description": "Verify tour does NOT reappear after completion",
+    "Steps to Execute": "1. Complete the full tour (all 7 steps)\n2. Refresh the page (F5)\n3. Log out and log back in",
+    "Expected Results": "1. Tour does NOT appear again after page refresh\n2. Tour does NOT appear on subsequent logins\n3. Tour completion is persisted",
+    "Test Data": "N/A",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Welcome Tour",
+    "Test Case ID": "TC_TOUR_015",
+    "Test Description": "Verify tour highlights correct UI element at each step",
+    "Steps to Execute": "1. Go through all 7 tour steps\n2. At each step, verify the highlighted element matches the description",
+    "Expected Results": "1. Step 1: No specific highlight (general welcome)\n2. Step 2: \"Style Chat\" sidebar item highlighted\n3. Step 3: \"Upload Outfit\" button highlighted\n4. Step 4: \"My Wardrobe\" sidebar item highlighted\n5. Step 5: \"Shop\" sidebar item highlighted\n6. Step 6: \"Basic Profile\" button highlighted\n7. Step 7: \"Settings\" sidebar item highlighted",
+    "Test Data": "N/A",
+    "Priority": "High",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Sheet": "Welcome Tour",
+    "Test Case ID": "TC_TOUR_016",
+    "Test Description": "Verify tour modal is positioned correctly near highlighted element",
+    "Steps to Execute": "1. Go through Steps 2-7\n2. Check modal position relative to highlighted element",
+    "Expected Results": "1. Modal appears adjacent to the highlighted element (tooltip style)\n2. Modal does not overflow screen boundaries\n3. Modal and highlighted element are both visible\n4. Arrow/pointer indicates the highlighted element (if applicable)",
+    "Test Data": "N/A",
+    "Priority": "Medium",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Sheet": "Welcome Tour",
+    "Test Case ID": "TC_TOUR_017",
+    "Test Description": "Verify tour progress bar visual accuracy",
+    "Steps to Execute": "1. Go through all 7 steps\n2. Observe progress bar fill at each step",
+    "Expected Results": "1. Step 1: ~14% bar filled\n2. Step 2: ~29% filled\n3. Step 3: ~43% filled\n4. Step 4: ~57% filled\n5. Step 5: ~71% filled\n6. Step 6: ~86% filled\n7. Step 7: 100% filled\n8. Bar animates smoothly between steps",
+    "Test Data": "N/A",
+    "Priority": "Low",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Sheet": "Welcome Tour",
+    "Test Case ID": "TC_TOUR_018",
+    "Test Description": "Verify clicking outside tour modal does NOT close it",
+    "Steps to Execute": "1. On any Tour step\n2. Click on the dimmed background outside the modal",
+    "Expected Results": "1. Tour modal remains open\n2. Background clicks are blocked\n3. User must use Next/Back/Skip/X to navigate",
+    "Test Data": "N/A",
+    "Priority": "Medium",
+    "Test Type": "Negative"
+  },
+  {
+    "Sheet": "Welcome Tour",
+    "Test Case ID": "TC_TOUR_019",
+    "Test Description": "Verify keyboard Escape key behavior on tour modal",
+    "Steps to Execute": "1. On any Tour step\n2. Press Escape key",
+    "Expected Results": "1. Either: Modal closes (Escape dismisses)\n2. OR: Nothing happens (Escape is blocked)\n3. Behavior is consistent across all steps",
+    "Test Data": "N/A",
+    "Priority": "Low",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Welcome Tour",
+    "Test Case ID": "TC_TOUR_020",
+    "Test Description": "Verify tour responsive behavior on Mobile (375x812)",
+    "Steps to Execute": "1. Open Dashboard on mobile viewport\n2. Observe tour modal behavior",
+    "Expected Results": "1. Tour modal adapts to mobile screen\n2. Modal is readable and not cut off\n3. Buttons are touch-friendly\n4. Highlighted elements are visible on mobile layout",
+    "Test Data": "Viewport: 375x812",
+    "Priority": "Medium",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_001",
+    "Test Description": "Verify Dashboard page loads successfully after tour completion",
+    "Steps to Execute": "1. Complete Welcome Tour OR dismiss it\n2. Observe the Dashboard page",
+    "Expected Results": "1. URL: https://app.digitalstylist.com/chat\n2. Page has 3-column layout:\n   - Left: Sidebar navigation\n   - Center: Chat area\n   - Right: Product recommendations panel\n3. All sections load properly without errors",
+    "Test Data": "URL: https://app.digitalstylist.com/chat",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_002",
+    "Test Description": "Verify Left Sidebar content and navigation items",
+    "Steps to Execute": "1. Observe left sidebar panel",
+    "Expected Results": "1. \"chic concierge\" logo/branding at top\n2. \"+ New Conversation\" button\n3. \"RECENT CONVERSATIONS\" section (with \"No conversations yet\" if new user)\n4. Bottom navigation items:\n   - 💬 Style Chat (active/highlighted)\n   - 🛍 Shop\n   - 👗 My Wardrobe\n   - ⚙ Settings\n5. All items have icons and labels",
+    "Test Data": "N/A",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_003",
+    "Test Description": "Verify Center Chat Area content",
+    "Steps to Execute": "1. Observe the center panel",
+    "Expected Results": "1. Header: \"CHIC Concierge\" with \"Online\" status\n2. Welcome message bubble: \"Hi [Username]! 👋\" with personalized greeting\n3. AI intro message: \"I'm CHIC Concierge, your personal stylist on-demand. I'm here to help you refine your style, build outfits you love, and discover pieces that make you feel confident and beautiful. What can I help you with today?\"\n4. Timestamp displayed (e.g., \"15:42\")\n5. Quick action buttons: \"Upload Outfit\" and \"Basic Profile\"\n6. Chat input: \"Ask me about your style...\" with 0/500 counter\n7. Send button (arrow icon)",
+    "Test Data": "N/A",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_004",
+    "Test Description": "Verify Right Panel - \"Your Closet-Ready Favorites\"",
+    "Steps to Execute": "1. Observe the right panel",
+    "Expected Results": "1. Header: \"✨ Your Closet-Ready Favorites\" with \"Stylist Selected\" subtitle\n2. Product cards displayed with:\n   - Product image\n   - Product name (e.g., \"Pleated Floral Dress - Exclusive\")\n   - Brand name\n   - Price (e.g., \"$128\")\n   - Product description snippet\n   - \"🛍 Shop Now\" button\n3. Multiple product cards are scrollable",
+    "Test Data": "N/A",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_005",
+    "Test Description": "Verify \"CHIC Concierge\" header shows Online status",
+    "Steps to Execute": "1. Observe the chat header",
+    "Expected Results": "1. \"CHIC Concierge\" name displayed\n2. \"Online\" status indicator with green dot or text\n3. Indicates the AI stylist is available",
+    "Test Data": "N/A",
+    "Priority": "Medium",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_006",
+    "Test Description": "Verify personalized welcome message uses correct username",
+    "Steps to Execute": "1. Login and observe the welcome message",
+    "Expected Results": "1. Message reads \"Hi [Actual Username]! 👋\"\n2. Username matches the logged-in user's name\n3. Wave emoji is displayed correctly",
+    "Test Data": "Expected: \"Hi Mustafa Shaheen! 👋\" (or logged-in user name)",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_007",
+    "Test Description": "Verify \"+ New Conversation\" button functionality",
+    "Steps to Execute": "1. Click \"+ New Conversation\" button in sidebar",
+    "Expected Results": "1. A new chat conversation is started\n2. Chat area clears or opens a new thread\n3. Welcome/intro message may reappear\n4. Previous conversation is saved under \"RECENT CONVERSATIONS\"",
+    "Test Data": "N/A",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_008",
+    "Test Description": "Verify \"No conversations yet\" state for new users",
+    "Steps to Execute": "1. Login as a new user\n2. Observe \"RECENT CONVERSATIONS\" section in sidebar",
+    "Expected Results": "1. \"No conversations yet\" placeholder text is displayed\n2. Section is empty (no previous chats)\n3. After first message, conversation appears here",
+    "Test Data": "N/A",
+    "Priority": "Medium",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_009",
+    "Test Description": "Verify \"Style Chat\" navigation item is active by default",
+    "Steps to Execute": "1. Navigate to Dashboard\n2. Observe sidebar",
+    "Expected Results": "1. \"Style Chat\" is highlighted/active (different background or border)\n2. Chat area is displayed in center panel\n3. Icon and text are clearly visible",
+    "Test Data": "N/A",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_010",
+    "Test Description": "Verify \"Shop\" navigation click",
+    "Steps to Execute": "1. Click \"Shop\" in left sidebar",
+    "Expected Results": "1. User navigates to Shop page\n2. \"Shop\" item becomes active in sidebar\n3. Center content changes to shop/browse view\n4. URL updates accordingly",
+    "Test Data": "N/A",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_011",
+    "Test Description": "Verify \"My Wardrobe\" navigation click",
+    "Steps to Execute": "1. Click \"My Wardrobe\" in left sidebar",
+    "Expected Results": "1. User navigates to Wardrobe page\n2. \"My Wardrobe\" becomes active\n3. Digital closet content is displayed\n4. URL updates accordingly",
+    "Test Data": "N/A",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_012",
+    "Test Description": "Verify \"Settings\" navigation click",
+    "Steps to Execute": "1. Click \"Settings\" in left sidebar",
+    "Expected Results": "1. User navigates to Settings page\n2. \"Settings\" becomes active\n3. Account/settings content displayed\n4. URL updates accordingly",
+    "Test Data": "N/A",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_013",
+    "Test Description": "Verify chat input placeholder text",
+    "Steps to Execute": "1. Observe the chat input field at the bottom",
+    "Expected Results": "1. Placeholder: \"Ask me about your style...\"\n2. Character counter shows \"0/500\"\n3. Send button (arrow icon) is visible on the right\n4. Input field spans the width of the chat area",
+    "Test Data": "N/A",
+    "Priority": "Medium",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_014",
+    "Test Description": "Verify sending a message in chat",
+    "Steps to Execute": "1. Click on chat input field\n2. Type a message (e.g., \"What should I wear for a date night?\")\n3. Click Send button (arrow icon)",
+    "Expected Results": "1. Message appears in chat as user bubble (right-aligned)\n2. Character counter updates while typing\n3. AI response starts generating (loading indicator)\n4. AI stylist responds with styling advice\n5. Input field clears after sending",
+    "Test Data": "Message: \"What should I wear for a date night?\"",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_015",
+    "Test Description": "Verify sending a message using Enter key",
+    "Steps to Execute": "1. Click on chat input\n2. Type a message\n3. Press Enter key",
+    "Expected Results": "1. Message is sent (same as clicking Send button)\n2. User message appears in chat\n3. AI response is triggered",
+    "Test Data": "Message: \"Suggest a casual outfit\"",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_016",
+    "Test Description": "Verify 500 character limit on chat input",
+    "Steps to Execute": "1. Click on chat input\n2. Type a message exceeding 500 characters\n3. Observe counter and behavior",
+    "Expected Results": "1. Counter updates in real-time (e.g., \"250/500\")\n2. Input stops accepting characters at 500 OR\n3. Counter shows limit reached (e.g., \"500/500\")\n4. User cannot type beyond 500 characters",
+    "Test Data": "Message: 500+ characters",
+    "Priority": "High",
+    "Test Type": "Negative"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_017",
+    "Test Description": "Verify sending empty message",
+    "Steps to Execute": "1. Click on chat input\n2. Leave it empty\n3. Click Send button or press Enter",
+    "Expected Results": "1. Empty message is NOT sent\n2. Send button may be disabled when input is empty\n3. No empty bubble appears in chat",
+    "Test Data": "Message: (empty)",
+    "Priority": "High",
+    "Test Type": "Negative"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_018",
+    "Test Description": "Verify sending message with only spaces",
+    "Steps to Execute": "1. Type only spaces in chat input\n2. Click Send",
+    "Expected Results": "1. Spaces-only message is NOT sent OR\n2. Input is trimmed and treated as empty\n3. No blank bubble in chat",
+    "Test Data": "Message: \"     \" (spaces only)",
+    "Priority": "Medium",
+    "Test Type": "Negative"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_019",
+    "Test Description": "Verify chat character counter updates in real-time",
+    "Steps to Execute": "1. Start typing in chat input\n2. Observe counter updating",
+    "Expected Results": "1. Counter updates with each character typed: \"0/500\" → \"1/500\" → \"2/500\"...\n2. Counter decrements on backspace\n3. Counter is accurate",
+    "Test Data": "N/A",
+    "Priority": "Medium",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_020",
+    "Test Description": "Verify \"Upload Outfit\" button functionality",
+    "Steps to Execute": "1. Click \"Upload Outfit\" button (below chat area)",
+    "Expected Results": "1. File upload dialog opens OR camera/upload interface appears\n2. User can select an image (JPG/PNG)\n3. After upload: outfit appears in chat for analysis\n4. AI provides feedback on the outfit",
+    "Test Data": "Image: outfit photo (JPG/PNG)",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_021",
+    "Test Description": "Verify \"Basic Profile\" button functionality",
+    "Steps to Execute": "1. Click \"Basic Profile\" button (below chat area)",
+    "Expected Results": "1. User is navigated to Style Profile page OR\n2. Profile panel/modal opens\n3. User can view/edit measurements, colors, style preferences",
+    "Test Data": "N/A",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_022",
+    "Test Description": "Verify product card displays all required information",
+    "Steps to Execute": "1. Observe a product card in the right panel",
+    "Expected Results": "1. Product image loads correctly\n2. Product name is displayed\n3. Brand name is shown\n4. Price is displayed (e.g., \"$128\")\n5. Short description/snippet is shown\n6. \"🛍 Shop Now\" button is clickable",
+    "Test Data": "N/A",
+    "Priority": "High",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_023",
+    "Test Description": "Verify \"Shop Now\" button on product card",
+    "Steps to Execute": "1. Click \"Shop Now\" on a product card in the right panel",
+    "Expected Results": "1. User is redirected to the product detail page OR\n2. External shopping link opens in new tab\n3. Correct product page loads",
+    "Test Data": "Product: \"Pleated Floral Dress - Exclusive\" - $128",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_024",
+    "Test Description": "Verify right panel is scrollable with multiple products",
+    "Steps to Execute": "1. Observe the right panel\n2. Scroll down within the panel",
+    "Expected Results": "1. Multiple product cards are displayed\n2. Panel is scrollable (vertical scroll)\n3. Additional product cards load on scroll\n4. Scroll is smooth without jank",
+    "Test Data": "N/A",
+    "Priority": "Medium",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_025",
+    "Test Description": "Verify product recommendations are personalized",
+    "Steps to Execute": "1. Login with a user who completed style profile\n2. Observe product recommendations in right panel",
+    "Expected Results": "1. Recommended products align with user's style preferences\n2. Products match selected colors and style (from onboarding)\n3. \"Stylist Selected\" subtitle indicates curated picks",
+    "Test Data": "User with completed style profile",
+    "Priority": "Medium",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_026",
+    "Test Description": "Verify Dashboard requires authentication",
+    "Steps to Execute": "1. Open new browser (no session)\n2. Navigate directly to https://app.digitalstylist.com/chat",
+    "Expected Results": "1. User is redirected to Login page\n2. Chat Dashboard is NOT accessible without login",
+    "Test Data": "URL: https://app.digitalstylist.com/chat",
+    "Priority": "Critical",
+    "Test Type": "Security"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_027",
+    "Test Description": "Verify XSS prevention in chat input",
+    "Steps to Execute": "1. Type XSS script in chat input: <script>alert(\"XSS\")</script>\n2. Send the message",
+    "Expected Results": "1. Script is NOT executed\n2. Message is displayed as plain text (escaped)\n3. No alert popup\n4. Chat functions normally after sending",
+    "Test Data": "Message: <script>alert(\"XSS\")</script>",
+    "Priority": "Critical",
+    "Test Type": "Security"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_028",
+    "Test Description": "Verify SQL injection prevention in chat input",
+    "Steps to Execute": "1. Type SQL injection in chat: ' OR 1=1 --\n2. Send the message",
+    "Expected Results": "1. Application does NOT crash\n2. No database error exposed\n3. Input is handled as normal text\n4. AI responds normally or gracefully handles",
+    "Test Data": "Message: ' OR 1=1 --",
+    "Priority": "Critical",
+    "Test Type": "Security"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_029",
+    "Test Description": "Verify Dashboard page load time",
+    "Steps to Execute": "1. Open DevTools → Network tab\n2. Navigate to Dashboard\n3. Measure page load time",
+    "Expected Results": "1. Page loads within 3 seconds\n2. Chat messages render within 2 seconds\n3. Product images in right panel load (lazy loading OK)\n4. No excessive API calls",
+    "Test Data": "Network: Standard broadband",
+    "Priority": "High",
+    "Test Type": "Performance"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_030",
+    "Test Description": "Verify chat AI response time",
+    "Steps to Execute": "1. Send a simple message in chat\n2. Measure time until AI response starts appearing",
+    "Expected Results": "1. AI response begins within 5 seconds\n2. Typing/loading indicator shown while processing\n3. Response streams progressively (not all at once after long delay)",
+    "Test Data": "Message: \"What should I wear today?\"",
+    "Priority": "High",
+    "Test Type": "Performance"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_031",
+    "Test Description": "Verify Dashboard responsive layout on Mobile (375x812)",
+    "Steps to Execute": "1. Open Dashboard on mobile viewport or resize to 375x812\n2. Observe layout",
+    "Expected Results": "1. Left sidebar collapses to hamburger menu or bottom nav\n2. Chat area takes full width\n3. Right panel (recommendations) may be hidden or accessible via toggle\n4. Chat input is visible and usable\n5. No horizontal scroll",
+    "Test Data": "Viewport: 375x812",
+    "Priority": "High",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_032",
+    "Test Description": "Verify Dashboard responsive layout on Tablet (768x1024)",
+    "Steps to Execute": "1. Open Dashboard on tablet viewport\n2. Observe layout",
+    "Expected Results": "1. Layout adapts to tablet\n2. Sidebar may collapse or remain visible\n3. Chat and recommendations are accessible\n4. All elements properly sized",
+    "Test Data": "Viewport: 768x1024",
+    "Priority": "Medium",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_033",
+    "Test Description": "Verify \"chic concierge\" logo/branding in sidebar",
+    "Steps to Execute": "1. Observe top of left sidebar",
+    "Expected Results": "1. \"chic concierge\" text logo is displayed in stylized font\n2. Logo is properly rendered\n3. Matches brand identity",
+    "Test Data": "N/A",
+    "Priority": "Low",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_034",
+    "Test Description": "Verify timestamp on chat messages",
+    "Steps to Execute": "1. Observe the AI welcome message\n2. Check for timestamp",
+    "Expected Results": "1. Timestamp is displayed below the message (e.g., \"15:42\")\n2. Time is in user's local timezone\n3. Format is consistent (HH:MM)",
+    "Test Data": "N/A",
+    "Priority": "Low",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_035",
+    "Test Description": "Verify chat scroll behavior with multiple messages",
+    "Steps to Execute": "1. Send multiple messages in chat\n2. Wait for AI responses\n3. Observe scroll behavior",
+    "Expected Results": "1. Chat auto-scrolls to latest message\n2. User can scroll up to view history\n3. Smooth scrolling behavior\n4. New messages appear at the bottom",
+    "Test Data": "N/A",
+    "Priority": "Medium",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_036",
+    "Test Description": "Verify chat message with special characters and emojis",
+    "Steps to Execute": "1. Type a message with emojis and special chars\n2. Send the message",
+    "Expected Results": "1. Emojis render correctly in chat\n2. Special characters display properly\n3. No encoding issues\n4. AI responds normally",
+    "Test Data": "Message: \"What about this outfit? 👗✨ I love the red & blue combo!\"",
+    "Priority": "Medium",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_037",
+    "Test Description": "Verify multiple conversations in sidebar",
+    "Steps to Execute": "1. Send messages in current chat\n2. Click \"+ New Conversation\"\n3. Send messages in new chat\n4. Observe sidebar",
+    "Expected Results": "1. First conversation appears under \"RECENT CONVERSATIONS\"\n2. New conversation is the active one\n3. User can switch between conversations by clicking\n4. Each conversation retains its history",
+    "Test Data": "N/A",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_038",
+    "Test Description": "Verify switching between conversations preserves chat history",
+    "Steps to Execute": "1. Have 2+ conversations in sidebar\n2. Click on older conversation\n3. Click back to newer conversation",
+    "Expected Results": "1. Older conversation loads with full chat history\n2. Newer conversation also retains its messages\n3. No data loss between switches",
+    "Test Data": "N/A",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_039",
+    "Test Description": "Verify Send button disabled state when input is empty",
+    "Steps to Execute": "1. Observe Send button when chat input is empty\n2. Type a character and observe\n3. Delete the character and observe",
+    "Expected Results": "1. Send button appears disabled/greyed when input is empty\n2. Send button becomes active/enabled when text is entered\n3. Visual state change is clear",
+    "Test Data": "N/A",
+    "Priority": "Medium",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Sheet": "Dashboard - Layout",
+    "Test Case ID": "TC_DASH_040",
+    "Test Description": "Verify page refresh preserves current conversation",
+    "Steps to Execute": "1. Send some messages in chat\n2. Press F5 to refresh\n3. Observe chat area",
+    "Expected Results": "1. Chat conversation is preserved after refresh\n2. All messages (user + AI) are still visible\n3. Current conversation remains active",
+    "Test Data": "N/A",
+    "Priority": "High",
+    "Test Type": "Positive"
+  }
+]

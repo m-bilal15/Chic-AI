@@ -1,0 +1,116 @@
+{
+  "description": "Security and boundary test data for signup page testing",
+
+  "sql_injection_payloads": {
+    "full_name_sqli": {
+      "full_name": "' OR 1=1 --",
+      "email": "sqli@test.com",
+      "password": "SecurePass@123",
+      "confirm_password": "SecurePass@123"
+    },
+    "email_sqli": {
+      "full_name": "John Smith",
+      "email": "' OR 1=1 --@test.com",
+      "password": "SecurePass@123",
+      "confirm_password": "SecurePass@123"
+    },
+    "advanced_sqli": [
+      "admin'--",
+      "' OR '1'='1",
+      "'; DROP TABLE users--",
+      "1' UNION SELECT NULL--"
+    ]
+  },
+
+  "xss_payloads": {
+    "full_name_xss": {
+      "full_name": "<script>alert('XSS')</script>",
+      "email": "xss@test.com",
+      "password": "SecurePass@123",
+      "confirm_password": "SecurePass@123"
+    },
+    "email_xss": {
+      "full_name": "John Smith",
+      "email": "<script>alert('XSS')</script>",
+      "password": "SecurePass@123",
+      "confirm_password": "SecurePass@123"
+    },
+    "password_xss": {
+      "full_name": "John Smith",
+      "email": "john@test.com",
+      "password": "<script>alert('XSS')</script>",
+      "confirm_password": "<script>alert('XSS')</script>"
+    },
+    "xss_variants": [
+      "<img src=x onerror=alert(1)>",
+      "<svg onload=alert(1)>",
+      "javascript:alert('XSS')",
+      "<iframe src='javascript:alert(1)'>",
+      "<body onload=alert('XSS')>"
+    ]
+  },
+
+  "html_injection": {
+    "full_name_html": {
+      "full_name": "<b>Bold Name</b><img src=x onerror=alert(1)>",
+      "email": "html@test.com",
+      "password": "SecurePass@123",
+      "confirm_password": "SecurePass@123"
+    }
+  },
+
+  "boundary_tests": {
+    "extremely_long_name": {
+      "full_name": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "email": "john@test.com",
+      "password": "SecurePass@123",
+      "confirm_password": "SecurePass@123",
+      "description": "256 characters"
+    },
+    "extremely_long_email": {
+      "full_name": "John Smith",
+      "email": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@test.com",
+      "password": "SecurePass@123",
+      "confirm_password": "SecurePass@123",
+      "description": "250+ characters in local part"
+    },
+    "extremely_long_password": {
+      "full_name": "John Smith",
+      "email": "john@test.com",
+      "password": "SecurePass@123SecurePass@123SecurePass@123SecurePass@123SecurePass@123SecurePass@123SecurePass@123SecurePass@123SecurePass@123SecurePass@123SecurePass@123SecurePass@123SecurePass@123SecurePass@123SecurePass@123SecurePass@123",
+      "confirm_password": "SecurePass@123SecurePass@123SecurePass@123SecurePass@123SecurePass@123SecurePass@123SecurePass@123SecurePass@123SecurePass@123SecurePass@123SecurePass@123SecurePass@123SecurePass@123SecurePass@123SecurePass@123SecurePass@123",
+      "description": "256+ characters"
+    }
+  },
+
+  "unicode_and_special": {
+    "unicode_chars": {
+      "full_name": "Test 测试 テスト",
+      "email": "unicode@test.com",
+      "password": "SecurePass@123",
+      "confirm_password": "SecurePass@123"
+    },
+    "emoji_in_name": {
+      "full_name": "John 😀 Smith",
+      "email": "emoji@test.com",
+      "password": "SecurePass@123",
+      "confirm_password": "SecurePass@123"
+    }
+  },
+
+  "rate_limiting_test": {
+    "description": "For testing rapid submissions",
+    "emails": [
+      "test1@test.com",
+      "test2@test.com",
+      "test3@test.com",
+      "test4@test.com",
+      "test5@test.com",
+      "test6@test.com",
+      "test7@test.com",
+      "test8@test.com",
+      "test9@test.com",
+      "test10@test.com"
+    ]
+  }
+}

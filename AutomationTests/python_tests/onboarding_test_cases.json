@@ -1,0 +1,782 @@
+[
+  {
+    "Sheet": "General Onboarding",
+    "Test Case ID": "TC_OB_001",
+    "Test Description": "Verify questionnaire page loads after sign up",
+    "Steps to Execute": "1. Complete sign up with valid credentials\n2. Wait for redirect\n3. Observe the page",
+    "Expected Results": "1. User is redirected to https://app.digitalstylist.com/questionnaire\n2. \"Let's set up your Style Profile\" heading is displayed\n3. \"Question 1 of 5\" subtitle is visible\n4. Step progress indicator shows step 1 as active\n5. Question 1 (Body Type) content loads",
+    "Test Data": "URL: https://app.digitalstylist.com/questionnaire",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "General Onboarding",
+    "Test Case ID": "TC_OB_002",
+    "Test Description": "Verify progress indicator shows 5 steps",
+    "Steps to Execute": "1. Navigate to questionnaire page\n2. Observe the step progress bar at the top",
+    "Expected Results": "1. Progress bar shows 5 numbered circles (1, 2, 3, 4, 5)\n2. Step 1 is highlighted/active (filled circle)\n3. Steps 2-5 are inactive (outlined/grey)\n4. Steps are connected by lines",
+    "Test Data": "N/A",
+    "Priority": "High",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Sheet": "General Onboarding",
+    "Test Case ID": "TC_OB_003",
+    "Test Description": "Verify progress indicator updates on each step",
+    "Steps to Execute": "1. Complete Step 1, click Continue\n2. Observe progress indicator on Step 2\n3. Continue through all steps, observing each time",
+    "Expected Results": "1. Step 1: Circle 1 active, 2-5 inactive\n2. Step 2: Circle 1 has green checkmark (✓), Circle 2 active\n3. Step 3: Circles 1-2 have checkmarks, Circle 3 active\n4. Step 4: Circles 1-3 have checkmarks, Circle 4 active\n5. Step 5: Circles 1-4 have checkmarks, Circle 5 active",
+    "Test Data": "N/A",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "General Onboarding",
+    "Test Case ID": "TC_OB_004",
+    "Test Description": "Verify \"Skip for now\" link is available on all steps",
+    "Steps to Execute": "1. Navigate to Step 1\n2. Observe \"Skip for now\" link in the header\n3. Navigate through Steps 2-5 and verify link presence",
+    "Expected Results": "1. \"Skip for now\" link is visible on all 5 steps\n2. Link is positioned next to the \"Let's set up your Style Profile\" heading\n3. Link is clickable on every step",
+    "Test Data": "N/A",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "General Onboarding",
+    "Test Case ID": "TC_OB_005",
+    "Test Description": "Verify \"Skip for now\" link skips entire questionnaire",
+    "Steps to Execute": "1. Navigate to questionnaire Step 1\n2. Click \"Skip for now\" link",
+    "Expected Results": "1. User is redirected to the main Dashboard/Home page\n2. Style profile is not set up (or saved with defaults)\n3. User can access the questionnaire later",
+    "Test Data": "N/A",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "General Onboarding",
+    "Test Case ID": "TC_OB_006",
+    "Test Description": "Verify Back button on Step 1",
+    "Steps to Execute": "1. Navigate to questionnaire Step 1\n2. Click \"< Back\" button",
+    "Expected Results": "1. Back button is visible on Step 1\n2. Clicking Back may: navigate to previous page (sign up confirmation) OR be disabled/hidden on Step 1\n3. Application does not crash",
+    "Test Data": "N/A",
+    "Priority": "Medium",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "General Onboarding",
+    "Test Case ID": "TC_OB_007",
+    "Test Description": "Verify Back button navigates to previous step (Steps 2-5)",
+    "Steps to Execute": "1. Complete Step 1, navigate to Step 2\n2. Click \"< Back\" button\n3. Observe navigation",
+    "Expected Results": "1. User is taken back to Step 1\n2. Previously selected option on Step 1 is still selected (persisted)\n3. Progress indicator reverts to Step 1 active\n4. Repeat for Steps 3→2, 4→3, 5→4",
+    "Test Data": "N/A",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "General Onboarding",
+    "Test Case ID": "TC_OB_008",
+    "Test Description": "Verify selections persist when navigating Back and Forward",
+    "Steps to Execute": "1. Select \"Hourglass\" on Step 1, click Continue\n2. Select \"Shoulders\" and \"Legs\" on Step 2, click Continue\n3. Click Back to Step 2\n4. Observe selections on Step 2\n5. Click Back to Step 1\n6. Observe selection on Step 1",
+    "Expected Results": "1. Step 2: \"Shoulders\" and \"Legs\" are still selected\n2. Step 1: \"Hourglass\" is still selected\n3. No data is lost during back/forward navigation",
+    "Test Data": "Step 1: Hourglass\nStep 2: Shoulders, Legs",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "General Onboarding",
+    "Test Case ID": "TC_OB_009",
+    "Test Description": "Verify complete end-to-end onboarding flow (happy path)",
+    "Steps to Execute": "1. Step 1: Select \"Hourglass\" → Continue\n2. Step 2: Select \"Waist\" and \"Legs\" → Continue\n3. Step 3: Select \"Midsection\" → Continue\n4. Step 4: Select 6 colors (Black, White, Navy Blue, Red, Beige/Cream, Gold) → Continue\n5. Step 5: Select 3 styles (Chic, Classic, Minimalist) → Complete Setup",
+    "Expected Results": "1. Each step advances correctly\n2. Progress indicator updates on each step\n3. On Step 5, \"Complete Setup\" button submits all data\n4. User is redirected to Dashboard/Home page\n5. Style Profile is saved and reflected in user preferences",
+    "Test Data": "Step 1: Hourglass\nStep 2: Waist, Legs\nStep 3: Midsection\nStep 4: Black, White, Navy Blue, Red, Beige/Cream, Gold\nStep 5: Chic, Classic, Minimalist",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "General Onboarding",
+    "Test Case ID": "TC_OB_010",
+    "Test Description": "Verify \"Let's set up your Style Profile\" heading on all steps",
+    "Steps to Execute": "1. Navigate through all 5 steps\n2. Observe the header text on each step",
+    "Expected Results": "1. \"Let's set up your Style Profile\" is displayed on all 5 steps\n2. \"Question X of 5\" subtitle updates (1 of 5, 2 of 5, ... 5 of 5)\n3. Checkmark icon is displayed next to the heading",
+    "Test Data": "N/A",
+    "Priority": "Medium",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Sheet": "General Onboarding",
+    "Test Case ID": "TC_OB_011",
+    "Test Description": "Verify questionnaire requires authentication",
+    "Steps to Execute": "1. Open a new browser (no session)\n2. Navigate directly to https://app.digitalstylist.com/questionnaire",
+    "Expected Results": "1. User is redirected to Login page\n2. Questionnaire is NOT accessible without authentication",
+    "Test Data": "URL: https://app.digitalstylist.com/questionnaire",
+    "Priority": "Critical",
+    "Test Type": "Security"
+  },
+  {
+    "Sheet": "General Onboarding",
+    "Test Case ID": "TC_OB_012",
+    "Test Description": "Verify page refresh does not lose progress",
+    "Steps to Execute": "1. Complete Steps 1-3\n2. On Step 4, press F5 or refresh the browser\n3. Observe which step loads",
+    "Expected Results": "1. Either: User returns to Step 4 with previous selections intact OR\n2. User returns to Step 1 but previous completed steps are saved\n3. Application does not crash or show error",
+    "Test Data": "N/A",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "General Onboarding",
+    "Test Case ID": "TC_OB_013",
+    "Test Description": "Verify browser back button behavior during questionnaire",
+    "Steps to Execute": "1. Navigate to Step 3\n2. Click browser Back button (not the in-app Back button)",
+    "Expected Results": "1. User navigates to Step 2 OR previous page\n2. Application handles browser navigation gracefully\n3. No duplicate submissions or errors",
+    "Test Data": "N/A",
+    "Priority": "Medium",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "General Onboarding",
+    "Test Case ID": "TC_OB_014",
+    "Test Description": "Verify responsive design of questionnaire on Mobile (375x812)",
+    "Steps to Execute": "1. Open questionnaire on mobile device or resize to 375x812\n2. Navigate through all 5 steps",
+    "Expected Results": "1. Layout adapts to mobile viewport\n2. Option cards stack vertically\n3. All cards, buttons, and text are visible\n4. No horizontal scroll\n5. Touch targets are appropriately sized\n6. Progress indicator is visible and readable",
+    "Test Data": "Viewport: 375x812",
+    "Priority": "High",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Sheet": "General Onboarding",
+    "Test Case ID": "TC_OB_015",
+    "Test Description": "Verify responsive design of questionnaire on Tablet (768x1024)",
+    "Steps to Execute": "1. Open questionnaire on tablet or resize to 768x1024\n2. Navigate through all 5 steps",
+    "Expected Results": "1. Layout adapts to tablet viewport\n2. Cards display in grid layout\n3. All elements are accessible",
+    "Test Data": "Viewport: 768x1024",
+    "Priority": "Medium",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Sheet": "General Onboarding",
+    "Test Case ID": "TC_OB_016",
+    "Test Description": "Verify questionnaire page load time",
+    "Steps to Execute": "1. Open DevTools → Network tab\n2. Navigate to questionnaire page\n3. Measure load time",
+    "Expected Results": "1. Page loads within 3 seconds\n2. All images (body type illustrations) load properly\n3. No broken images or missing assets",
+    "Test Data": "Network: Standard broadband",
+    "Priority": "High",
+    "Test Type": "Performance"
+  },
+  {
+    "Sheet": "Step 1 - Body Type",
+    "Test Case ID": "TC_OB_S1_001",
+    "Test Description": "Verify Step 1 page content loads correctly",
+    "Steps to Execute": "1. Navigate to questionnaire\n2. Observe Step 1 content",
+    "Expected Results": "1. Left panel shows:\n   - \"What's your body type?\" heading in bold\n   - Description: \"This helps us recommend the looks, fits, and styling advice that suit you best. Pick one option to keep going!\"\n2. Right panel \"Your Options\" shows:\n   - \"Click on an option to select it and continue\" instruction\n   - \"Don't worry about being perfect - we'll fine-tune this later! ✨\" message\n   - 5 body type option cards",
+    "Test Data": "N/A",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 1 - Body Type",
+    "Test Case ID": "TC_OB_S1_002",
+    "Test Description": "Verify all 5 body type options are displayed",
+    "Steps to Execute": "1. Navigate to Step 1\n2. Count and verify all body type cards",
+    "Expected Results": "1. Five options displayed:\n   - Hourglass: \"Balanced bust & hips, defined waist\"\n   - Triangle: \"Hips wider than bust & shoulders\"\n   - O-Shape: \"Fuller midsection, narrower hips\"\n   - Rectangle: \"Balanced proportions throughout\"\n   - Inverted Triangle: \"Strong shoulders, toned build\"\n2. Each card has an illustration image, name, and description",
+    "Test Data": "N/A",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 1 - Body Type",
+    "Test Case ID": "TC_OB_S1_003",
+    "Test Description": "Verify selecting a body type option",
+    "Steps to Execute": "1. Navigate to Step 1\n2. Click on \"Hourglass\" card",
+    "Expected Results": "1. Hourglass card gets selected (highlighted/bordered)\n2. Visual feedback shows selection (e.g., colored border, checkmark, background change)\n3. Other options remain unselected",
+    "Test Data": "Selection: Hourglass",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 1 - Body Type",
+    "Test Case ID": "TC_OB_S1_004",
+    "Test Description": "Verify only one body type can be selected (single select)",
+    "Steps to Execute": "1. Navigate to Step 1\n2. Click \"Hourglass\"\n3. Then click \"Triangle\"\n4. Then click \"Rectangle\"",
+    "Expected Results": "1. After clicking Hourglass: only Hourglass is selected\n2. After clicking Triangle: only Triangle is selected (Hourglass deselected)\n3. After clicking Rectangle: only Rectangle is selected\n4. Only one option is selected at any time",
+    "Test Data": "N/A",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 1 - Body Type",
+    "Test Case ID": "TC_OB_S1_005",
+    "Test Description": "Verify Continue button with a body type selected",
+    "Steps to Execute": "1. Navigate to Step 1\n2. Select any body type (e.g., \"O-Shape\")\n3. Click \"Continue →\" button",
+    "Expected Results": "1. User advances to Step 2 (Question 2 of 5)\n2. Progress indicator updates: Step 1 shows checkmark, Step 2 is active\n3. Selected body type is saved",
+    "Test Data": "Selection: O-Shape",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 1 - Body Type",
+    "Test Case ID": "TC_OB_S1_006",
+    "Test Description": "Verify Continue button without selecting any option",
+    "Steps to Execute": "1. Navigate to Step 1\n2. Do NOT select any body type\n3. Click \"Continue →\" button",
+    "Expected Results": "1. Either: Validation message appears (e.g., \"Please select a body type\")\n2. OR: Continue is disabled until a selection is made\n3. User does NOT advance to Step 2 without selection",
+    "Test Data": "Selection: None",
+    "Priority": "High",
+    "Test Type": "Negative"
+  },
+  {
+    "Sheet": "Step 1 - Body Type",
+    "Test Case ID": "TC_OB_S1_007",
+    "Test Description": "Verify deselecting a body type option",
+    "Steps to Execute": "1. Navigate to Step 1\n2. Click \"Hourglass\" to select it\n3. Click \"Hourglass\" again",
+    "Expected Results": "1. Either: Option gets deselected (toggle behavior)\n2. OR: Option remains selected (click another to switch)\n3. Behavior is consistent and predictable",
+    "Test Data": "Selection: Hourglass (click twice)",
+    "Priority": "Medium",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 1 - Body Type",
+    "Test Case ID": "TC_OB_S1_008",
+    "Test Description": "Verify each body type card displays illustration image",
+    "Steps to Execute": "1. Navigate to Step 1\n2. Observe each of the 5 body type cards",
+    "Expected Results": "1. All 5 cards display unique body type illustrations\n2. Images are not broken or pixelated\n3. Images properly represent the body type\n4. Images are centered within their cards",
+    "Test Data": "N/A",
+    "Priority": "Medium",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Sheet": "Step 1 - Body Type",
+    "Test Case ID": "TC_OB_S1_009",
+    "Test Description": "Verify card hover effect on body type options",
+    "Steps to Execute": "1. Navigate to Step 1\n2. Hover mouse over each body type card",
+    "Expected Results": "1. Card shows hover effect (shadow, border color change, or slight scale)\n2. Cursor changes to pointer\n3. Visual feedback indicates the card is clickable",
+    "Test Data": "N/A",
+    "Priority": "Low",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Sheet": "Step 1 - Body Type",
+    "Test Case ID": "TC_OB_S1_010",
+    "Test Description": "Verify left panel layout and content",
+    "Steps to Execute": "1. Navigate to Step 1\n2. Observe the left panel card",
+    "Expected Results": "1. Left panel is a white card with border\n2. \"What's your body type?\" in bold heading\n3. Description text in lighter color below\n4. \"< Back\" button at bottom left\n5. \"Continue →\" button at bottom (black, full-width)",
+    "Test Data": "N/A",
+    "Priority": "Low",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Sheet": "Step 2 - Highlight Areas",
+    "Test Case ID": "TC_OB_S2_001",
+    "Test Description": "Verify Step 2 page content loads correctly",
+    "Steps to Execute": "1. Complete Step 1\n2. Click Continue to reach Step 2\n3. Observe content",
+    "Expected Results": "1. Left panel shows:\n   - \"What areas of your body do you love to highlight?\" heading\n   - Description about showing love to favorite features\n   - \"Make your selections and click continue\" instruction\n2. Right panel shows:\n   - \"Your Options\" / \"Select your preferences\"\n   - \"Select all the areas you'd love to show off! ✨\"\n   - 6 body area option cards\n3. Progress indicator: Step 1 checkmark, Step 2 active",
+    "Test Data": "N/A",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 2 - Highlight Areas",
+    "Test Case ID": "TC_OB_S2_002",
+    "Test Description": "Verify all 6 highlight area options are displayed",
+    "Steps to Execute": "1. Navigate to Step 2\n2. Count and verify all option cards",
+    "Expected Results": "1. Six options displayed:\n   - Shoulders: \"Show off your shoulder line\"\n   - Bust/Chest: \"Highlight your neckline area\"\n   - Waist: \"Emphasize your waistline\"\n   - Hips: \"Accentuate your hip line\"\n   - Legs: \"Show off your legs\"\n   - Arms: \"Highlight your arms\"\n2. Each card has illustration, name, and description",
+    "Test Data": "N/A",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 2 - Highlight Areas",
+    "Test Case ID": "TC_OB_S2_003",
+    "Test Description": "Verify multi-select functionality (select multiple areas)",
+    "Steps to Execute": "1. Navigate to Step 2\n2. Click \"Shoulders\"\n3. Click \"Waist\"\n4. Click \"Legs\"",
+    "Expected Results": "1. All three cards are selected simultaneously (highlighted)\n2. Each shows visual selection indicator\n3. Multiple selections are allowed",
+    "Test Data": "Selections: Shoulders, Waist, Legs",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 2 - Highlight Areas",
+    "Test Case ID": "TC_OB_S2_004",
+    "Test Description": "Verify selecting all 6 options",
+    "Steps to Execute": "1. Navigate to Step 2\n2. Click all 6 option cards one by one",
+    "Expected Results": "1. All 6 options can be selected\n2. All show selected state\n3. No limit restriction (unlike colors/styles steps)",
+    "Test Data": "Selections: All 6 options",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 2 - Highlight Areas",
+    "Test Case ID": "TC_OB_S2_005",
+    "Test Description": "Verify deselecting an option (toggle)",
+    "Steps to Execute": "1. Navigate to Step 2\n2. Click \"Shoulders\" to select\n3. Click \"Shoulders\" again to deselect",
+    "Expected Results": "1. First click: Shoulders is selected\n2. Second click: Shoulders is deselected\n3. Toggle behavior works correctly",
+    "Test Data": "Selection: Shoulders (toggle)",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 2 - Highlight Areas",
+    "Test Case ID": "TC_OB_S2_006",
+    "Test Description": "Verify Continue without selecting any area",
+    "Steps to Execute": "1. Navigate to Step 2\n2. Do NOT select any area\n3. Click \"Continue →\"",
+    "Expected Results": "1. Either: Validation message shown (e.g., \"Please select at least one area\")\n2. OR: Allowed to continue without selection (if optional)\n3. Behavior matches business requirement",
+    "Test Data": "Selection: None",
+    "Priority": "High",
+    "Test Type": "Negative"
+  },
+  {
+    "Sheet": "Step 2 - Highlight Areas",
+    "Test Case ID": "TC_OB_S2_007",
+    "Test Description": "Verify Continue with selections advances to Step 3",
+    "Steps to Execute": "1. Navigate to Step 2\n2. Select \"Waist\" and \"Legs\"\n3. Click \"Continue →\"",
+    "Expected Results": "1. User advances to Step 3\n2. Progress: Steps 1-2 checkmarks, Step 3 active\n3. Selections are saved",
+    "Test Data": "Selections: Waist, Legs",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 2 - Highlight Areas",
+    "Test Case ID": "TC_OB_S2_008",
+    "Test Description": "Verify hint text \"Select the areas you love to highlight\"",
+    "Steps to Execute": "1. Navigate to Step 2\n2. Observe text at the bottom of options area",
+    "Expected Results": "1. \"Select the areas you love to highlight\" helper text is displayed\n2. Text is in lighter/grey color below the option cards",
+    "Test Data": "N/A",
+    "Priority": "Low",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Sheet": "Step 2 - Highlight Areas",
+    "Test Case ID": "TC_OB_S2_009",
+    "Test Description": "Verify card illustrations load properly",
+    "Steps to Execute": "1. Navigate to Step 2\n2. Check all 6 cards for their images",
+    "Expected Results": "1. All 6 cards display unique body area illustrations\n2. No broken images\n3. Images properly represent each body area",
+    "Test Data": "N/A",
+    "Priority": "Medium",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Sheet": "Step 2 - Highlight Areas",
+    "Test Case ID": "TC_OB_S2_010",
+    "Test Description": "Verify Back button returns to Step 1 with selection intact",
+    "Steps to Execute": "1. Complete Step 1 (select Hourglass)\n2. Navigate to Step 2\n3. Select some areas\n4. Click \"< Back\"",
+    "Expected Results": "1. User returns to Step 1\n2. \"Hourglass\" is still selected on Step 1\n3. Progress indicator reverts to Step 1 active",
+    "Test Data": "Step 1: Hourglass",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 3 - Minimize Areas",
+    "Test Case ID": "TC_OB_S3_001",
+    "Test Description": "Verify Step 3 page content loads correctly",
+    "Steps to Execute": "1. Complete Steps 1-2\n2. Click Continue to reach Step 3\n3. Observe content",
+    "Expected Results": "1. Left panel shows:\n   - \"Are there any areas you prefer to minimize or feel more confident when balanced?\" heading\n   - \"Totally optional — if there are areas you like a little less attention on, this is where you can tell us.\"\n   - \"Make your selections and click continue\"\n2. Right panel shows:\n   - \"Optional - select areas you'd like to balance or feel more confident about ✨\"\n   - 7 body area option cards\n3. Progress: Steps 1-2 checkmarks, Step 3 active",
+    "Test Data": "N/A",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 3 - Minimize Areas",
+    "Test Case ID": "TC_OB_S3_002",
+    "Test Description": "Verify all 7 minimize area options are displayed",
+    "Steps to Execute": "1. Navigate to Step 3\n2. Count and verify all option cards",
+    "Expected Results": "1. Seven options displayed:\n   - Shoulders: \"Balance broader shoulders\"\n   - Bust/Chest: \"Create a balanced silhouette\"\n   - Midsection: \"Smooth and flatter tummy area\"\n   - Waist: \"Smooth and define\"\n   - Hips: \"Balance hip proportions\"\n   - Legs: \"Create flattering proportions\"\n   - Arms: \"Balance and flatter\"\n2. Each card has illustration, name, description",
+    "Test Data": "N/A",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 3 - Minimize Areas",
+    "Test Case ID": "TC_OB_S3_003",
+    "Test Description": "Verify Step 3 is optional (Continue without selection)",
+    "Steps to Execute": "1. Navigate to Step 3\n2. Do NOT select any option\n3. Click \"Continue →\"",
+    "Expected Results": "1. User advances to Step 4 successfully\n2. No validation error (step is optional)\n3. \"Select areas you'd like to balance (optional)\" hint confirms optionality",
+    "Test Data": "Selection: None",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 3 - Minimize Areas",
+    "Test Case ID": "TC_OB_S3_004",
+    "Test Description": "Verify multi-select functionality on minimize areas",
+    "Steps to Execute": "1. Navigate to Step 3\n2. Click \"Midsection\"\n3. Click \"Hips\"\n4. Click \"Arms\"",
+    "Expected Results": "1. All three cards are selected simultaneously\n2. Multiple selections are allowed\n3. Each shows visual selection state",
+    "Test Data": "Selections: Midsection, Hips, Arms",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 3 - Minimize Areas",
+    "Test Case ID": "TC_OB_S3_005",
+    "Test Description": "Verify selecting all 7 options",
+    "Steps to Execute": "1. Navigate to Step 3\n2. Click all 7 option cards",
+    "Expected Results": "1. All 7 options can be selected\n2. No maximum limit enforced",
+    "Test Data": "Selections: All 7 options",
+    "Priority": "Medium",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 3 - Minimize Areas",
+    "Test Case ID": "TC_OB_S3_006",
+    "Test Description": "Verify deselecting an option (toggle)",
+    "Steps to Execute": "1. Navigate to Step 3\n2. Click \"Midsection\" to select\n3. Click \"Midsection\" again to deselect",
+    "Expected Results": "1. Toggle works correctly\n2. First click selects, second click deselects",
+    "Test Data": "Selection: Midsection (toggle)",
+    "Priority": "Medium",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 3 - Minimize Areas",
+    "Test Case ID": "TC_OB_S3_007",
+    "Test Description": "Verify note that Step 3 has Midsection (not in Step 2)",
+    "Steps to Execute": "1. Compare options in Step 2 and Step 3",
+    "Expected Results": "1. Step 3 has \"Midsection\" option (not present in Step 2)\n2. Step 2 does NOT have Midsection\n3. All other overlapping options are consistent in naming",
+    "Test Data": "N/A",
+    "Priority": "Low",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 3 - Minimize Areas",
+    "Test Case ID": "TC_OB_S3_008",
+    "Test Description": "Verify Back button returns to Step 2 with selections intact",
+    "Steps to Execute": "1. Complete Steps 1-2 with selections\n2. On Step 3, click \"< Back\"",
+    "Expected Results": "1. User returns to Step 2\n2. Step 2 selections are preserved\n3. Progress indicator updates accordingly",
+    "Test Data": "N/A",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 3 - Minimize Areas",
+    "Test Case ID": "TC_OB_S3_009",
+    "Test Description": "Verify \"Totally optional\" messaging is clear",
+    "Steps to Execute": "1. Navigate to Step 3\n2. Read the description text",
+    "Expected Results": "1. \"Totally optional\" text is clearly visible in the description\n2. Helper text: \"Select areas you'd like to balance (optional)\" at bottom\n3. User understands this step can be skipped",
+    "Test Data": "N/A",
+    "Priority": "Medium",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Sheet": "Step 3 - Minimize Areas",
+    "Test Case ID": "TC_OB_S3_010",
+    "Test Description": "Verify card illustrations load properly for all 7 options",
+    "Steps to Execute": "1. Navigate to Step 3\n2. Check all 7 cards",
+    "Expected Results": "1. All 7 illustrations load correctly\n2. No broken/missing images\n3. Each illustration represents the corresponding body area",
+    "Test Data": "N/A",
+    "Priority": "Medium",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Sheet": "Step 4 - Favorite Colors",
+    "Test Case ID": "TC_OB_S4_001",
+    "Test Description": "Verify Step 4 page content loads correctly",
+    "Steps to Execute": "1. Complete Steps 1-3\n2. Click Continue to reach Step 4\n3. Observe content",
+    "Expected Results": "1. Left panel shows:\n   - \"What are some of your favorite colors to wear?\" heading\n   - \"Tell us the colors that feel most 'you,' the ones you naturally gravitate toward or always love wearing.\"\n   - \"Make your selections and click continue\"\n2. Right panel shows:\n   - \"Choose up to 6 colors that make you feel confident and beautiful ✨\"\n   - Color palette with 15 color circles\n   - \"Selected Colors\" section with \"0/6\" counter\n   - \"Select 6 more colors\" hint text",
+    "Test Data": "N/A",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 4 - Favorite Colors",
+    "Test Case ID": "TC_OB_S4_002",
+    "Test Description": "Verify all 15 color options are displayed",
+    "Steps to Execute": "1. Navigate to Step 4\n2. Count and verify all color circles",
+    "Expected Results": "1. 15 color options displayed in 3 rows:\n   Row 1: Black, White, Gray, Navy Blue, Blue\n   Row 2: Red, Pink, Purple, Green, Yellow\n   Row 3: Orange, Brown/Tan, Beige/Cream, Gold, Silver\n2. Each circle shows the color visually with label below\n3. All colors are distinguishable",
+    "Test Data": "N/A",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 4 - Favorite Colors",
+    "Test Case ID": "TC_OB_S4_003",
+    "Test Description": "Verify selecting a single color",
+    "Steps to Execute": "1. Navigate to Step 4\n2. Click on \"Black\" color circle",
+    "Expected Results": "1. Black is selected (visual indicator: checkmark, border, or highlight)\n2. \"Selected Colors\" section shows the selected color\n3. Counter updates from \"0/6\" to \"1/6\"\n4. Hint text updates to \"Select 5 more colors\"",
+    "Test Data": "Selection: Black",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 4 - Favorite Colors",
+    "Test Case ID": "TC_OB_S4_004",
+    "Test Description": "Verify selecting exactly 6 colors (maximum)",
+    "Steps to Execute": "1. Navigate to Step 4\n2. Click 6 colors one by one: Black, White, Navy Blue, Red, Green, Gold",
+    "Expected Results": "1. All 6 colors are selected\n2. Counter shows \"6/6\"\n3. \"Selected Colors\" section shows all 6 selected colors\n4. Hint text changes (e.g., \"You've selected 6 colors\" or disappears)",
+    "Test Data": "Selections: Black, White, Navy Blue, Red, Green, Gold",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 4 - Favorite Colors",
+    "Test Case ID": "TC_OB_S4_005",
+    "Test Description": "Verify cannot select more than 6 colors (max limit enforcement)",
+    "Steps to Execute": "1. Navigate to Step 4\n2. Select 6 colors\n3. Try to click a 7th color",
+    "Expected Results": "1. 7th color is NOT selected\n2. Either: 7th click is ignored OR toast/message appears (\"Maximum 6 colors\")\n3. Counter remains at \"6/6\"\n4. Previously selected 6 colors remain unchanged",
+    "Test Data": "Selections: 6 colors + attempt 7th",
+    "Priority": "Critical",
+    "Test Type": "Negative"
+  },
+  {
+    "Sheet": "Step 4 - Favorite Colors",
+    "Test Case ID": "TC_OB_S4_006",
+    "Test Description": "Verify deselecting a color",
+    "Steps to Execute": "1. Navigate to Step 4\n2. Select \"Red\"\n3. Click \"Red\" again",
+    "Expected Results": "1. Red is deselected (removed from selection)\n2. Counter decrements (e.g., \"1/6\" to \"0/6\")\n3. Red is removed from \"Selected Colors\" section\n4. User can now select a different color",
+    "Test Data": "Selection: Red (toggle)",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 4 - Favorite Colors",
+    "Test Case ID": "TC_OB_S4_007",
+    "Test Description": "Verify \"Selected Colors\" section displays chosen colors",
+    "Steps to Execute": "1. Navigate to Step 4\n2. Select Black, Pink, and Gold",
+    "Expected Results": "1. \"Selected Colors\" section displays 3 selected color swatches\n2. Colors are displayed in the order selected\n3. Counter shows \"3/6\"",
+    "Test Data": "Selections: Black, Pink, Gold",
+    "Priority": "High",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Sheet": "Step 4 - Favorite Colors",
+    "Test Case ID": "TC_OB_S4_008",
+    "Test Description": "Verify counter \"0/6\" updates correctly with each selection/deselection",
+    "Steps to Execute": "1. Navigate to Step 4 (0/6)\n2. Select 1 color (1/6)\n3. Select 2nd color (2/6)\n4. Deselect 1st color (1/6)\n5. Select 3 more colors (4/6)",
+    "Expected Results": "1. Counter accurately reflects current selection count at each step\n2. Counter format: \"X/6\"\n3. Counter updates in real-time",
+    "Test Data": "N/A",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 4 - Favorite Colors",
+    "Test Case ID": "TC_OB_S4_009",
+    "Test Description": "Verify Continue without selecting any color",
+    "Steps to Execute": "1. Navigate to Step 4\n2. Do NOT select any color\n3. Click \"Continue →\"",
+    "Expected Results": "1. Either: Validation error (e.g., \"Please select at least 1 color\")\n2. OR: Allowed to continue (if optional)\n3. Verify against business requirements",
+    "Test Data": "Selection: None",
+    "Priority": "High",
+    "Test Type": "Negative"
+  },
+  {
+    "Sheet": "Step 4 - Favorite Colors",
+    "Test Case ID": "TC_OB_S4_010",
+    "Test Description": "Verify Continue with less than 6 colors selected",
+    "Steps to Execute": "1. Navigate to Step 4\n2. Select only 2 colors\n3. Click \"Continue →\"",
+    "Expected Results": "1. Either: Allowed to continue with partial selection\n2. OR: Validation prompts to select more\n3. Note: \"Select 6 more colors\" hint suggests 6 may be required",
+    "Test Data": "Selections: Black, White (2 of 6)",
+    "Priority": "High",
+    "Test Type": "Negative"
+  },
+  {
+    "Sheet": "Step 4 - Favorite Colors",
+    "Test Case ID": "TC_OB_S4_011",
+    "Test Description": "Verify Continue with exactly 6 colors advances to Step 5",
+    "Steps to Execute": "1. Navigate to Step 4\n2. Select 6 colors\n3. Click \"Continue →\"",
+    "Expected Results": "1. User advances to Step 5\n2. Progress: Steps 1-4 checkmarks, Step 5 active\n3. Color selections are saved",
+    "Test Data": "Selections: 6 colors",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 4 - Favorite Colors",
+    "Test Case ID": "TC_OB_S4_012",
+    "Test Description": "Verify swap color selection when at max limit",
+    "Steps to Execute": "1. Select 6 colors\n2. Deselect one color\n3. Select a different color",
+    "Expected Results": "1. After deselecting: counter shows \"5/6\"\n2. Can select a new color to replace\n3. Counter returns to \"6/6\"\n4. Swap is smooth without errors",
+    "Test Data": "Selections: 6 colors → deselect 1 → select new 1",
+    "Priority": "Medium",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 4 - Favorite Colors",
+    "Test Case ID": "TC_OB_S4_013",
+    "Test Description": "Verify \"Select colors from the palette above\" empty state",
+    "Steps to Execute": "1. Navigate to Step 4\n2. Observe \"Selected Colors\" section before selecting any colors",
+    "Expected Results": "1. Empty state shows icon placeholder\n2. Text: \"Select colors from the palette above\"\n3. Counter shows \"0/6\"",
+    "Test Data": "N/A",
+    "Priority": "Low",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Sheet": "Step 4 - Favorite Colors",
+    "Test Case ID": "TC_OB_S4_014",
+    "Test Description": "Verify color circle hover states",
+    "Steps to Execute": "1. Navigate to Step 4\n2. Hover over each color circle",
+    "Expected Results": "1. Color circle shows hover effect (scale, shadow, or border)\n2. Cursor changes to pointer\n3. Visual feedback for interactivity",
+    "Test Data": "N/A",
+    "Priority": "Low",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Sheet": "Step 4 - Favorite Colors",
+    "Test Case ID": "TC_OB_S4_015",
+    "Test Description": "Verify Back button returns to Step 3 with selections intact",
+    "Steps to Execute": "1. Complete Steps 1-3 with selections\n2. On Step 4, select some colors\n3. Click \"< Back\"",
+    "Expected Results": "1. User returns to Step 3\n2. Step 3 selections are preserved\n3. Return to Step 4: color selections may or may not persist (verify)",
+    "Test Data": "N/A",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 5 - Style Description",
+    "Test Case ID": "TC_OB_S5_001",
+    "Test Description": "Verify Step 5 page content loads correctly",
+    "Steps to Execute": "1. Complete Steps 1-4\n2. Click Continue to reach Step 5\n3. Observe content",
+    "Expected Results": "1. Left panel shows:\n   - \"How would you describe your ideal style in 3 words?\" heading\n   - \"Think vibe, mood, or the energy you want your outfits to give.\"\n   - \"* Required question\" in red text\n   - \"Make your selections and click continue\"\n2. Right panel shows:\n   - \"Select up to 3 preferences\"\n   - \"How would you describe your ideal style in 3 words? *\" (red asterisk)\n   - \"Choose up to 3 styles that represent your personal aesthetic ✨\"\n   - 10 style option cards\n   - \"Select up to 3 styles that represent you\" hint at bottom\n3. Button changed to \"Complete Setup →\"\n4. Progress: Steps 1-4 checkmarks, Step 5 active",
+    "Test Data": "N/A",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 5 - Style Description",
+    "Test Case ID": "TC_OB_S5_002",
+    "Test Description": "Verify all 10 style options are displayed",
+    "Steps to Execute": "1. Navigate to Step 5\n2. Count and verify all style cards",
+    "Expected Results": "1. Ten style options displayed:\n   Row 1: Chic (\"Effortlessly stylish and put-together\"), Classic (\"Timeless, elegant, refined\"), Boho (\"Free-spirited, artistic, flowing\"), Creative (\"Original and artistic expression\")\n   Row 2: Bold (\"Confident and statement-making\"), Sporty (\"Athletic and comfortable style\"), Romantic (\"Dreamy, soft, delicate\"), Minimalist (\"Clean, simple, understated\")\n   Row 3: Trendy (\"Current and fashion-forward\"), Casual (\"Relaxed, comfortable, effortless\")\n2. Each has illustration, name, description",
+    "Test Data": "N/A",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 5 - Style Description",
+    "Test Case ID": "TC_OB_S5_003",
+    "Test Description": "Verify selecting a single style",
+    "Steps to Execute": "1. Navigate to Step 5\n2. Click \"Chic\" card",
+    "Expected Results": "1. Chic card is selected (visual indicator)\n2. Other cards remain unselected\n3. Selection is highlighted",
+    "Test Data": "Selection: Chic",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 5 - Style Description",
+    "Test Case ID": "TC_OB_S5_004",
+    "Test Description": "Verify selecting exactly 3 styles (maximum)",
+    "Steps to Execute": "1. Navigate to Step 5\n2. Click \"Classic\"\n3. Click \"Minimalist\"\n4. Click \"Casual\"",
+    "Expected Results": "1. All 3 styles are selected\n2. Visual indicator on all 3 cards\n3. Hint updates or max selection is reached",
+    "Test Data": "Selections: Classic, Minimalist, Casual",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 5 - Style Description",
+    "Test Case ID": "TC_OB_S5_005",
+    "Test Description": "Verify cannot select more than 3 styles (max limit)",
+    "Steps to Execute": "1. Navigate to Step 5\n2. Select 3 styles: Chic, Classic, Boho\n3. Try to click a 4th style: Bold",
+    "Expected Results": "1. 4th style is NOT selected\n2. Either: Click is ignored OR message appears (\"Maximum 3 styles\")\n3. Previously selected 3 remain unchanged",
+    "Test Data": "Selections: 3 styles + attempt 4th",
+    "Priority": "Critical",
+    "Test Type": "Negative"
+  },
+  {
+    "Sheet": "Step 5 - Style Description",
+    "Test Case ID": "TC_OB_S5_006",
+    "Test Description": "Verify deselecting a style option (toggle)",
+    "Steps to Execute": "1. Navigate to Step 5\n2. Select \"Sporty\"\n3. Click \"Sporty\" again",
+    "Expected Results": "1. Sporty is deselected\n2. Selection count decreases\n3. User can select a different style",
+    "Test Data": "Selection: Sporty (toggle)",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 5 - Style Description",
+    "Test Case ID": "TC_OB_S5_007",
+    "Test Description": "Verify \"Complete Setup\" without selecting any style (required field)",
+    "Steps to Execute": "1. Navigate to Step 5\n2. Do NOT select any style\n3. Click \"Complete Setup →\"",
+    "Expected Results": "1. Validation error displayed (e.g., \"Please select at least 1 style\")\n2. \"* Required question\" indicates this is mandatory\n3. Profile setup does NOT complete without selection\n4. User stays on Step 5",
+    "Test Data": "Selection: None",
+    "Priority": "Critical",
+    "Test Type": "Negative"
+  },
+  {
+    "Sheet": "Step 5 - Style Description",
+    "Test Case ID": "TC_OB_S5_008",
+    "Test Description": "Verify \"Complete Setup\" with 1 style selected",
+    "Steps to Execute": "1. Navigate to Step 5\n2. Select only \"Chic\"\n3. Click \"Complete Setup →\"",
+    "Expected Results": "1. Either: Setup completes with 1 style (minimum 1 required)\n2. OR: Validation asks for more selections\n3. Verify minimum requirement",
+    "Test Data": "Selection: Chic",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 5 - Style Description",
+    "Test Case ID": "TC_OB_S5_009",
+    "Test Description": "Verify \"Complete Setup\" with 2 styles selected",
+    "Steps to Execute": "1. Navigate to Step 5\n2. Select \"Chic\" and \"Classic\"\n3. Click \"Complete Setup →\"",
+    "Expected Results": "1. Either: Setup completes successfully\n2. OR: Prompt to select 1 more (if exactly 3 required)\n3. Verify business requirement",
+    "Test Data": "Selections: Chic, Classic",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 5 - Style Description",
+    "Test Case ID": "TC_OB_S5_010",
+    "Test Description": "Verify \"Complete Setup\" with 3 styles completes onboarding",
+    "Steps to Execute": "1. Navigate to Step 5\n2. Select 3 styles: Chic, Classic, Minimalist\n3. Click \"Complete Setup →\"",
+    "Expected Results": "1. Loading indicator appears on button\n2. Style profile is saved successfully\n3. User is redirected to Dashboard/Home page\n4. Onboarding is marked as complete\n5. Saved preferences are reflected in the app",
+    "Test Data": "Selections: Chic, Classic, Minimalist",
+    "Priority": "Critical",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 5 - Style Description",
+    "Test Case ID": "TC_OB_S5_011",
+    "Test Description": "Verify \"* Required question\" indicator is visible",
+    "Steps to Execute": "1. Navigate to Step 5\n2. Observe the question heading and left panel",
+    "Expected Results": "1. Red asterisk (*) is visible next to the question heading\n2. \"* Required question\" text is displayed in left panel\n3. Clear indication that this step is mandatory",
+    "Test Data": "N/A",
+    "Priority": "Medium",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Sheet": "Step 5 - Style Description",
+    "Test Case ID": "TC_OB_S5_012",
+    "Test Description": "Verify button label is \"Complete Setup →\" (not \"Continue\")",
+    "Steps to Execute": "1. Navigate to Step 5\n2. Observe the action button",
+    "Expected Results": "1. Button text is \"Complete Setup →\" (not \"Continue →\")\n2. This indicates it is the final step\n3. Button styling matches previous steps (black with white text)",
+    "Test Data": "N/A",
+    "Priority": "Medium",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Sheet": "Step 5 - Style Description",
+    "Test Case ID": "TC_OB_S5_013",
+    "Test Description": "Verify swap style selection at max limit",
+    "Steps to Execute": "1. Select 3 styles\n2. Deselect one style\n3. Select a different style",
+    "Expected Results": "1. Deselection works, count goes to 2\n2. New selection is accepted, count returns to 3\n3. Swap is smooth",
+    "Test Data": "N/A",
+    "Priority": "Medium",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 5 - Style Description",
+    "Test Case ID": "TC_OB_S5_014",
+    "Test Description": "Verify style card illustrations load properly",
+    "Steps to Execute": "1. Navigate to Step 5\n2. Observe all 10 style cards",
+    "Expected Results": "1. All 10 cards display unique fashion illustrations\n2. No broken/missing images\n3. Each illustration represents the style type\n4. Images are centered and properly sized",
+    "Test Data": "N/A",
+    "Priority": "Medium",
+    "Test Type": "UI/UX"
+  },
+  {
+    "Sheet": "Step 5 - Style Description",
+    "Test Case ID": "TC_OB_S5_015",
+    "Test Description": "Verify Back button returns to Step 4 with selections intact",
+    "Steps to Execute": "1. Complete Steps 1-4 with selections\n2. On Step 5, click \"< Back\"",
+    "Expected Results": "1. User returns to Step 4\n2. Step 4 color selections are preserved\n3. Progress indicator updates",
+    "Test Data": "N/A",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 5 - Style Description",
+    "Test Case ID": "TC_OB_S5_016",
+    "Test Description": "Verify \"Complete Setup\" button disabled during API call",
+    "Steps to Execute": "1. Select 3 styles on Step 5\n2. Click \"Complete Setup →\"\n3. Observe button state during submission",
+    "Expected Results": "1. Button shows loading state (spinner/animation)\n2. Button is disabled to prevent double-click\n3. No duplicate profile submissions\n4. After success: redirect to Dashboard",
+    "Test Data": "Selections: Chic, Classic, Minimalist",
+    "Priority": "High",
+    "Test Type": "Positive"
+  },
+  {
+    "Sheet": "Step 5 - Style Description",
+    "Test Case ID": "TC_OB_S5_017",
+    "Test Description": "Verify \"Select up to 3 styles that represent you\" hint text",
+    "Steps to Execute": "1. Navigate to Step 5\n2. Observe hint text at bottom of options",
+    "Expected Results": "1. \"Select up to 3 styles that represent you\" is displayed\n2. Text is in lighter/grey color\n3. Provides clear guidance on selection limit",
+    "Test Data": "N/A",
+    "Priority": "Low",
+    "Test Type": "UI/UX"
+  }
+]

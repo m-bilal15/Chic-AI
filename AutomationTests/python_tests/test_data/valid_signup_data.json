@@ -1,0 +1,52 @@
+{
+  "description": "Valid test data for signup page testing",
+  "valid_names": [
+    "John Smith",
+    "Robert Johnson",
+    "Sarah Williams",
+    "Michael Brown",
+    "Emily Davis"
+  ],
+  "valid_names_with_special_chars": [
+    "O'Brien Smith",
+    "Jean-Pierre Dupont",
+    "María García",
+    "Müller Fischer",
+    "Anne-Marie O'Connor"
+  ],
+  "valid_emails": [
+    "john.test@example.com",
+    "robert.doe@test.com",
+    "sarah.j@company.co.uk",
+    "user+tag@domain.com",
+    "firstname.lastname@company.io"
+  ],
+  "valid_passwords": [
+    "SecurePass@123",
+    "MyP@ssw0rd!",
+    "Strong#Pass1",
+    "ValidPass@456",
+    "Test@1234567"
+  ],
+  "valid_password_min_length": {
+    "description": "Exactly 8 characters - minimum boundary test",
+    "password": "Pass@123"
+  },
+  "complete_valid_user": {
+    "full_name": "John Smith",
+    "email": "john.new@test.com",
+    "password": "SecurePass@123",
+    "confirm_password": "SecurePass@123"
+  },
+  "keyboard_test_user": {
+    "full_name": "Robert Johnson",
+    "email": "robert.kb@test.com",
+    "password": "SecurePass@123",
+    "confirm_password": "SecurePass@123"
+  },
+  "google_oauth_test": {
+    "description": "For Google Sign Up testing",
+    "note": "Requires valid Google account credentials",
+    "test_google_email": "testuser@gmail.com"
+  }
+}

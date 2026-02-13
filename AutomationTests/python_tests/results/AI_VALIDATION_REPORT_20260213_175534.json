@@ -1,0 +1,347 @@
+{
+  "test_date": "2026-02-13 17:50:39",
+  "account": "tim@gmail.com",
+  "total_scenarios": 8,
+  "passed": 0,
+  "failed": 8,
+  "scenarios": [
+    {
+      "test_id": "AI_VAL_001",
+      "category": "Event Styling",
+      "user_query": "What should I wear to a wedding?",
+      "checks": [
+        {
+          "check": "Response Time",
+          "result": "FAIL",
+          "actual": "20.1s",
+          "expected": "< 15 seconds"
+        },
+        {
+          "check": "Must Contain Keywords",
+          "result": "FAIL",
+          "actual": "Missing: ['wedding', 'dress', 'outfit', 'formal', 'elegant']",
+          "expected": [
+            "wedding",
+            "dress",
+            "outfit",
+            "formal",
+            "elegant"
+          ]
+        },
+        {
+          "check": "Should Contain Keywords",
+          "result": "INFO",
+          "actual": "None found",
+          "expected": [
+            "color",
+            "style",
+            "accessories"
+          ]
+        },
+        {
+          "check": "Must NOT Contain",
+          "result": "PASS",
+          "actual": "Clean",
+          "expected": "Avoid: ['casual', 'gym', 'workout']"
+        },
+        {
+          "check": "Response Length",
+          "result": "FAIL",
+          "actual": "0 chars",
+          "expected": "> 50 chars"
+        }
+      ],
+      "passed": 1,
+      "failed": 3,
+      "overall": "FAIL",
+      "actual_response": "",
+      "response_time": 20.129348278045654
+    },
+    {
+      "test_id": "AI_VAL_002",
+      "category": "Professional Styling",
+      "user_query": "I have a job interview tomorrow. What should I wear?",
+      "checks": [
+        {
+          "check": "Response Time",
+          "result": "FAIL",
+          "actual": "20.1s",
+          "expected": "< 15 seconds"
+        },
+        {
+          "check": "Must Contain Keywords",
+          "result": "FAIL",
+          "actual": "Missing: ['interview', 'professional', 'business', 'outfit']",
+          "expected": [
+            "interview",
+            "professional",
+            "business",
+            "outfit"
+          ]
+        },
+        {
+          "check": "Should Contain Keywords",
+          "result": "INFO",
+          "actual": "None found",
+          "expected": [
+            "confidence",
+            "appropriate",
+            "polished"
+          ]
+        },
+        {
+          "check": "Must NOT Contain",
+          "result": "PASS",
+          "actual": "Clean",
+          "expected": "Avoid: ['casual', 'party', 'beach']"
+        },
+        {
+          "check": "Response Length",
+          "result": "FAIL",
+          "actual": "0 chars",
+          "expected": "> 50 chars"
+        }
+      ],
+      "passed": 1,
+      "failed": 3,
+      "overall": "FAIL",
+      "actual_response": "",
+      "response_time": 20.11366629600525
+    },
+    {
+      "test_id": "AI_VAL_003",
+      "category": "Color Advice - Personalization",
+      "user_query": "What colors look good on me?",
+      "checks": [
+        {
+          "check": "Response Time",
+          "result": "FAIL",
+          "actual": "20.1s",
+          "expected": "< 15 seconds"
+        },
+        {
+          "check": "Must Contain Keywords",
+          "result": "FAIL",
+          "actual": "Missing: ['color', 'colors']",
+          "expected": [
+            "color",
+            "colors"
+          ]
+        },
+        {
+          "check": "Should Contain Keywords",
+          "result": "INFO",
+          "actual": "None found",
+          "expected": [
+            "body type",
+            "skin tone",
+            "preference"
+          ]
+        },
+        {
+          "check": "Response Length",
+          "result": "FAIL",
+          "actual": "0 chars",
+          "expected": "> 50 chars"
+        }
+      ],
+      "passed": 0,
+      "failed": 3,
+      "overall": "FAIL",
+      "actual_response": "",
+      "response_time": 20.128074884414673
+    },
+    {
+      "test_id": "AI_VAL_004",
+      "category": "Body Type Styling - Personalization",
+      "user_query": "What styles suit my body type?",
+      "checks": [
+        {
+          "check": "Response Time",
+          "result": "FAIL",
+          "actual": "20.2s",
+          "expected": "< 15 seconds"
+        },
+        {
+          "check": "Must Contain Keywords",
+          "result": "FAIL",
+          "actual": "Missing: ['body type', 'style', 'suit']",
+          "expected": [
+            "body type",
+            "style",
+            "suit"
+          ]
+        },
+        {
+          "check": "Response Length",
+          "result": "FAIL",
+          "actual": "0 chars",
+          "expected": "> 50 chars"
+        }
+      ],
+      "passed": 0,
+      "failed": 3,
+      "overall": "FAIL",
+      "actual_response": "",
+      "response_time": 20.158252239227295
+    },
+    {
+      "test_id": "AI_VAL_005",
+      "category": "Product Shopping",
+      "user_query": "Show me some dress options for summer",
+      "checks": [
+        {
+          "check": "Response Time",
+          "result": "FAIL",
+          "actual": "20.1s",
+          "expected": "< 15 seconds"
+        },
+        {
+          "check": "Must Contain Keywords",
+          "result": "FAIL",
+          "actual": "Missing: ['dress', 'summer']",
+          "expected": [
+            "dress",
+            "summer"
+          ]
+        },
+        {
+          "check": "Should Contain Keywords",
+          "result": "INFO",
+          "actual": "None found",
+          "expected": [
+            "options",
+            "recommendations",
+            "styles"
+          ]
+        },
+        {
+          "check": "Response Length",
+          "result": "FAIL",
+          "actual": "0 chars",
+          "expected": "> 50 chars"
+        }
+      ],
+      "passed": 0,
+      "failed": 3,
+      "overall": "FAIL",
+      "actual_response": "",
+      "response_time": 20.12223768234253
+    },
+    {
+      "test_id": "AI_VAL_006",
+      "category": "Conversation Context",
+      "user_query": [
+        "I'm attending a wedding",
+        "I prefer modest styles"
+      ],
+      "checks": [
+        {
+          "check": "Response Time",
+          "result": "FAIL",
+          "actual": "20.1s",
+          "expected": "< 15 seconds each"
+        },
+        {
+          "check": "Response Length",
+          "result": "FAIL",
+          "actual": "0 chars",
+          "expected": "> 50 chars"
+        }
+      ],
+      "passed": 0,
+      "failed": 2,
+      "overall": "FAIL",
+      "actual_response": "",
+      "response_time": 20.146465301513672
+    },
+    {
+      "test_id": "AI_VAL_007",
+      "category": "Wardrobe Building",
+      "user_query": "What are essential pieces every wardrobe should have?",
+      "checks": [
+        {
+          "check": "Response Time",
+          "result": "FAIL",
+          "actual": "20.1s",
+          "expected": "< 15 seconds"
+        },
+        {
+          "check": "Must Contain Keywords",
+          "result": "FAIL",
+          "actual": "Missing: ['essential', 'wardrobe', 'pieces']",
+          "expected": [
+            "essential",
+            "wardrobe",
+            "pieces"
+          ]
+        },
+        {
+          "check": "Should Contain Keywords",
+          "result": "INFO",
+          "actual": "None found",
+          "expected": [
+            "basics",
+            "versatile",
+            "must-have"
+          ]
+        },
+        {
+          "check": "Response Length",
+          "result": "FAIL",
+          "actual": "0 chars",
+          "expected": "> 50 chars"
+        }
+      ],
+      "passed": 0,
+      "failed": 3,
+      "overall": "FAIL",
+      "actual_response": "",
+      "response_time": 20.120223999023438
+    },
+    {
+      "test_id": "AI_VAL_008",
+      "category": "Style Problem Solving",
+      "user_query": "I always wear black. How can I add more color to my wardrobe?",
+      "checks": [
+        {
+          "check": "Response Time",
+          "result": "FAIL",
+          "actual": "20.1s",
+          "expected": "< 15 seconds"
+        },
+        {
+          "check": "Must Contain Keywords",
+          "result": "FAIL",
+          "actual": "Missing: ['color', 'wardrobe']",
+          "expected": [
+            "color",
+            "wardrobe"
+          ]
+        },
+        {
+          "check": "Should Contain Keywords",
+          "result": "INFO",
+          "actual": "None found",
+          "expected": [
+            "gradually",
+            "start",
+            "options",
+            "comfortable"
+          ]
+        },
+        {
+          "check": "Response Length",
+          "result": "FAIL",
+          "actual": "0 chars",
+          "expected": "> 50 chars"
+        }
+      ],
+      "passed": 0,
+      "failed": 3,
+      "overall": "FAIL",
+      "actual_response": "",
+      "response_time": 20.113821744918823
+    }
+  ]
+}

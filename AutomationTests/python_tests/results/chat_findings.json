@@ -1,0 +1,18 @@
+{
+  "chat_elements": [
+    "Send Button (submit)",
+    "Buttons (all)",
+    "Inputs (all)",
+    "Images"
+  ],
+  "selectors": {
+    "Send Button (submit)": "button[type=\"submit\"]",
+    "Buttons (all)": "button",
+    "Inputs (all)": "input",
+    "Images": "img"
+  },
+  "features": [],
+  "flow": [
+    "Login completed"
+  ]
+}
